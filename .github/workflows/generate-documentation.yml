@@ -26,7 +26,7 @@ jobs:
         uses: docker://ponylang/library-documentation-action-v2:release
         with:
           site_url: "https://redvers.github.io/pony-glib/"
-          library_name: "pony-glib"
+          library_name: "glib"
           docs_build_dir: "build/glib-docs"
       - name: Setup Pages
         uses: actions/configure-pages@v2
