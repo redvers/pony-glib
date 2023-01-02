@@ -1,0 +1,5 @@
+_repos/
+_corral/
+build/
+lock.json
+*.swp

@@ -1,0 +1,15 @@
+{
+  "packages": [
+    "pony-glib"
+  ],
+  "deps": [
+  ],
+  "info": {
+    "description": "A pony port of GLib",
+    "homepage": "https://github.com/redvers/pony-glib/",
+    "license": "BSD-2-Clause",
+    "documentation_url": "https://redvers.github.io/pony-glib",
+    "version": "0.0.0",
+    "name": "pony-glib"
+  }
+}
