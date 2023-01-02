@@ -27,13 +27,13 @@ jobs:
         with:
           site_url: "https://redvers.github.io/pony-glib/"
           library_name: "pony-glib"
-          docs_build_dir: "build/pony-glib-docs"
+          docs_build_dir: "build/glib-docs"
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: 'build/pony-glib-docs/site/'
+          path: 'build/glib-docs/site/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
