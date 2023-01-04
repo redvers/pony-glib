@@ -10,7 +10,7 @@
      000000: [FundamentalType(long unsigned int) size=64]: g_type  
      000064: [ArrayType size=(0-1)]->[UNION size=64]
 */
-struct GValue
+struct SGValue
   var g_type': U64 = U64(0)
   var data0': U64 = U64(0)
   var data1': U64 = U64(0)

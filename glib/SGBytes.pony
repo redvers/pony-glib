@@ -8,4 +8,4 @@
 
   Fields (Offset in bits):
 */
-struct GBytes
+struct SGBytes

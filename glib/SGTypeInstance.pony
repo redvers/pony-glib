@@ -9,5 +9,5 @@
   Fields (Offset in bits):
      000000: [PointerType size=64]->[Struct size=64,fid: f133]: g_class  
 */
-struct GTypeInstance
-  var g_class': NullablePointer[GTypeClass] = NullablePointer[GTypeClass].none()
+struct SGTypeInstance
+  var g_class': NullablePointer[SGTypeClass] = NullablePointer[SGTypeClass].none()

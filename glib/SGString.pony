@@ -11,7 +11,7 @@
      000064: [FundamentalType(long unsigned int) size=64]: len  
      000128: [FundamentalType(long unsigned int) size=64]: allocated_len  
 */
-struct GString
+struct SGString
   var str': Pointer[U8] = Pointer[U8]
   var len': U64 = U64(0)
   var allocated_len': U64 = U64(0)

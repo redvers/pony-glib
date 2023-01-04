@@ -11,7 +11,7 @@
      000064: [PointerType size=64]->[Struct size=192,fid: f134]: values  
      000128: [FundamentalType(unsigned int) size=32]: n_prealloced  
 */
-struct GValueArray
+struct SGValueArray
   var n_values': U32 = U32(0)
-  var values': NullablePointer[GValue] = NullablePointer[GValue].none()
+  var values': NullablePointer[SGValue] = NullablePointer[SGValue].none()
   var n_prealloced': U32 = U32(0)

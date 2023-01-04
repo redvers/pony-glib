@@ -10,6 +10,6 @@
      000000: [PointerType size=64]->[FundamentalType(void) size=0]: data  
      000064: [PointerType size=64]->[Struct size=128,fid: f84]: next  
 */
-struct GSList
+struct SGSList
   var data': Pointer[None] = Pointer[None]
-  var next': NullablePointer[GSList] = NullablePointer[GSList].none()
+  var next': NullablePointer[SGSList] = NullablePointer[SGSList].none()

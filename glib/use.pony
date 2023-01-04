@@ -1,6 +1,76 @@
 
 
 /*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gapplication.h:124
+  Original Name: g_application_get_type03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gapplication.h:124
+
+  Return Value: [FundamentalType(long unsigned int) size=64]
+
+  Arguments:
+*/
+use @g_application_get_type[U64]()
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gapplication.h:130
+  Original Name: g_application_new03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gapplication.h:130
+
+  Return Value: [PointerType size=64]->[Struct size=256,fid: f169]
+
+  Arguments:
+    [PointerType size=64]->[FundamentalType(char) size=8]
+    [Enumeration size=32,fid: f159]
+*/
+use @g_application_new[NullablePointer[SGApplication]](applicationid': Pointer[U8] tag, flags': I32)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gapplication.h:209
+  Original Name: g_application_open03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gapplication.h:209
+
+  Return Value: [FundamentalType(void) size=0]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=256,fid: f169]
+    [PointerType size=64]->[PointerType size=64]->[Struct size=,fid: f161]
+    [FundamentalType(int) size=32]
+    [PointerType size=64]->[FundamentalType(char) size=8]
+*/
+use @g_application_open[None](application': NullablePointer[SGApplication] tag, files': Pointer[NullablePointer[SGFile]] tag, nfiles': I32, hint': Pointer[U8] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gapplication.h:220
+  Original Name: g_application_quit03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gapplication.h:220
+
+  Return Value: [FundamentalType(void) size=0]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=256,fid: f169]
+*/
+use @g_application_quit[None](application': NullablePointer[SGApplication] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gapplication.h:215
+  Original Name: g_application_run03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gapplication.h:215
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=256,fid: f169]
+    [FundamentalType(int) size=32]
+    [PointerType size=64]->[PointerType size=64]->[FundamentalType(char) size=8]
+*/
+use @g_application_run[I32](application': NullablePointer[SGApplication] tag, argc': I32, argv': Pointer[Pointer[U8]] tag)
+
+
+
+/*
   Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/glib/garray.h:95
   Original Name: g_array_append_vals03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/glib/garray.h:95
 
@@ -11,7 +81,7 @@
     [PointerType size=64]->[FundamentalType(void) size=0]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_array_append_vals[NullablePointer[GArray]](array': NullablePointer[GArray] tag, data': Pointer[None] tag, len': U32)
+use @g_array_append_vals[NullablePointer[SGArray]](array': NullablePointer[SGArray] tag, data': Pointer[None] tag, len': U32)
 
 
 
@@ -27,7 +97,7 @@ use @g_array_append_vals[NullablePointer[GArray]](array': NullablePointer[GArray
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[FundamentalType(unsigned int) size=32]
 */
-use @g_array_binary_search[I32](array': NullablePointer[GArray] tag, target': Pointer[None] tag, comparefunc': Pointer[None] tag, outmatchindex': Pointer[U32] tag)
+use @g_array_binary_search[I32](array': NullablePointer[SGArray] tag, target': Pointer[None] tag, comparefunc': Pointer[None] tag, outmatchindex': Pointer[U32] tag)
 
 
 
@@ -40,7 +110,7 @@ use @g_array_binary_search[I32](array': NullablePointer[GArray] tag, target': Po
   Arguments:
     [PointerType size=64]->[Struct size=128,fid: f19]
 */
-use @g_array_copy[NullablePointer[GArray]](array': NullablePointer[GArray] tag)
+use @g_array_copy[NullablePointer[SGArray]](array': NullablePointer[SGArray] tag)
 
 
 
@@ -54,7 +124,7 @@ use @g_array_copy[NullablePointer[GArray]](array': NullablePointer[GArray] tag)
     [PointerType size=64]->[Struct size=128,fid: f19]
     [FundamentalType(int) size=32]
 */
-use @g_array_free[Pointer[U8]](array': NullablePointer[GArray] tag, freesegment': I32)
+use @g_array_free[Pointer[U8]](array': NullablePointer[SGArray] tag, freesegment': I32)
 
 
 
@@ -67,7 +137,7 @@ use @g_array_free[Pointer[U8]](array': NullablePointer[GArray] tag, freesegment'
   Arguments:
     [PointerType size=64]->[Struct size=128,fid: f19]
 */
-use @g_array_get_element_size[U32](array': NullablePointer[GArray] tag)
+use @g_array_get_element_size[U32](array': NullablePointer[SGArray] tag)
 
 
 
@@ -95,7 +165,7 @@ use @g_array_get_type[U64]()
     [PointerType size=64]->[FundamentalType(void) size=0]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_array_insert_vals[NullablePointer[GArray]](array': NullablePointer[GArray] tag, index': U32, data': Pointer[None] tag, len': U32)
+use @g_array_insert_vals[NullablePointer[SGArray]](array': NullablePointer[SGArray] tag, index': U32, data': Pointer[None] tag, len': U32)
 
 
 
@@ -110,7 +180,7 @@ use @g_array_insert_vals[NullablePointer[GArray]](array': NullablePointer[GArray
     [FundamentalType(int) size=32]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_array_new[NullablePointer[GArray]](zeroterminated': I32, clear': I32, elementsize': U32)
+use @g_array_new[NullablePointer[SGArray]](zeroterminated': I32, clear': I32, elementsize': U32)
 
 
 
@@ -125,7 +195,7 @@ use @g_array_new[NullablePointer[GArray]](zeroterminated': I32, clear': I32, ele
     [PointerType size=64]->[FundamentalType(void) size=0]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_array_prepend_vals[NullablePointer[GArray]](array': NullablePointer[GArray] tag, data': Pointer[None] tag, len': U32)
+use @g_array_prepend_vals[NullablePointer[SGArray]](array': NullablePointer[SGArray] tag, data': Pointer[None] tag, len': U32)
 
 
 
@@ -138,7 +208,7 @@ use @g_array_prepend_vals[NullablePointer[GArray]](array': NullablePointer[GArra
   Arguments:
     [PointerType size=64]->[Struct size=128,fid: f19]
 */
-use @g_array_ref[NullablePointer[GArray]](array': NullablePointer[GArray] tag)
+use @g_array_ref[NullablePointer[SGArray]](array': NullablePointer[SGArray] tag)
 
 
 
@@ -152,7 +222,7 @@ use @g_array_ref[NullablePointer[GArray]](array': NullablePointer[GArray] tag)
     [PointerType size=64]->[Struct size=128,fid: f19]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_array_remove_index_fast[NullablePointer[GArray]](array': NullablePointer[GArray] tag, index': U32)
+use @g_array_remove_index_fast[NullablePointer[SGArray]](array': NullablePointer[SGArray] tag, index': U32)
 
 
 
@@ -166,7 +236,7 @@ use @g_array_remove_index_fast[NullablePointer[GArray]](array': NullablePointer[
     [PointerType size=64]->[Struct size=128,fid: f19]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_array_remove_index[NullablePointer[GArray]](array': NullablePointer[GArray] tag, index': U32)
+use @g_array_remove_index[NullablePointer[SGArray]](array': NullablePointer[SGArray] tag, index': U32)
 
 
 
@@ -181,7 +251,7 @@ use @g_array_remove_index[NullablePointer[GArray]](array': NullablePointer[GArra
     [FundamentalType(unsigned int) size=32]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_array_remove_range[NullablePointer[GArray]](array': NullablePointer[GArray] tag, index': U32, length': U32)
+use @g_array_remove_range[NullablePointer[SGArray]](array': NullablePointer[SGArray] tag, index': U32, length': U32)
 
 
 
@@ -195,7 +265,7 @@ use @g_array_remove_range[NullablePointer[GArray]](array': NullablePointer[GArra
     [PointerType size=64]->[Struct size=128,fid: f19]
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
 */
-use @g_array_set_clear_func[None](array': NullablePointer[GArray] tag, clearfunc': Pointer[None] tag)
+use @g_array_set_clear_func[None](array': NullablePointer[SGArray] tag, clearfunc': Pointer[None] tag)
 
 
 
@@ -209,7 +279,7 @@ use @g_array_set_clear_func[None](array': NullablePointer[GArray] tag, clearfunc
     [PointerType size=64]->[Struct size=128,fid: f19]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_array_set_size[NullablePointer[GArray]](array': NullablePointer[GArray] tag, length': U32)
+use @g_array_set_size[NullablePointer[SGArray]](array': NullablePointer[SGArray] tag, length': U32)
 
 
 
@@ -225,7 +295,7 @@ use @g_array_set_size[NullablePointer[GArray]](array': NullablePointer[GArray] t
     [FundamentalType(unsigned int) size=32]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_array_sized_new[NullablePointer[GArray]](zeroterminated': I32, clear': I32, elementsize': U32, reservedsize': U32)
+use @g_array_sized_new[NullablePointer[SGArray]](zeroterminated': I32, clear': I32, elementsize': U32, reservedsize': U32)
 
 
 
@@ -239,7 +309,7 @@ use @g_array_sized_new[NullablePointer[GArray]](zeroterminated': I32, clear': I3
     [PointerType size=64]->[Struct size=128,fid: f19]
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
 */
-use @g_array_sort[None](array': NullablePointer[GArray] tag, comparefunc': Pointer[None] tag)
+use @g_array_sort[None](array': NullablePointer[SGArray] tag, comparefunc': Pointer[None] tag)
 
 
 
@@ -254,7 +324,7 @@ use @g_array_sort[None](array': NullablePointer[GArray] tag, comparefunc': Point
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_array_sort_with_data[None](array': NullablePointer[GArray] tag, comparefunc': Pointer[None] tag, userdata': Pointer[None] tag)
+use @g_array_sort_with_data[None](array': NullablePointer[SGArray] tag, comparefunc': Pointer[None] tag, userdata': Pointer[None] tag)
 
 
 
@@ -268,7 +338,7 @@ use @g_array_sort_with_data[None](array': NullablePointer[GArray] tag, comparefu
     [PointerType size=64]->[Struct size=128,fid: f19]
     [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
 */
-use @g_array_steal[Pointer[None]](array': NullablePointer[GArray] tag, len': Pointer[U64] tag)
+use @g_array_steal[Pointer[None]](array': NullablePointer[SGArray] tag, len': Pointer[U64] tag)
 
 
 
@@ -281,7 +351,7 @@ use @g_array_steal[Pointer[None]](array': NullablePointer[GArray] tag, len': Poi
   Arguments:
     [PointerType size=64]->[Struct size=128,fid: f19]
 */
-use @g_array_unref[None](array': NullablePointer[GArray] tag)
+use @g_array_unref[None](array': NullablePointer[SGArray] tag)
 
 
 
@@ -296,7 +366,7 @@ use @g_array_unref[None](array': NullablePointer[GArray] tag)
     [PointerType size=64]->[FundamentalType(unsigned char) size=8]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_byte_array_append[NullablePointer[GByteArray]](array': NullablePointer[GByteArray] tag, data': Pointer[U8] tag, len': U32)
+use @g_byte_array_append[NullablePointer[SGByteArray]](array': NullablePointer[SGByteArray] tag, data': Pointer[U8] tag, len': U32)
 
 
 
@@ -309,7 +379,7 @@ use @g_byte_array_append[NullablePointer[GByteArray]](array': NullablePointer[GB
   Arguments:
     [PointerType size=64]->[Struct size=128,fid: f19]
 */
-use @g_byte_array_free_to_bytes[NullablePointer[GBytes]](array': NullablePointer[GByteArray] tag)
+use @g_byte_array_free_to_bytes[NullablePointer[SGBytes]](array': NullablePointer[SGByteArray] tag)
 
 
 
@@ -323,7 +393,7 @@ use @g_byte_array_free_to_bytes[NullablePointer[GBytes]](array': NullablePointer
     [PointerType size=64]->[Struct size=128,fid: f19]
     [FundamentalType(int) size=32]
 */
-use @g_byte_array_free[Pointer[U8]](array': NullablePointer[GByteArray] tag, freesegment': I32)
+use @g_byte_array_free[Pointer[U8]](array': NullablePointer[SGByteArray] tag, freesegment': I32)
 
 
 
@@ -349,7 +419,7 @@ use @g_byte_array_get_type[U64]()
     [PointerType size=64]->[FundamentalType(unsigned char) size=8]
     [FundamentalType(long unsigned int) size=64]
 */
-use @g_byte_array_new_take[NullablePointer[GByteArray]](data': Pointer[U8] tag, len': U64)
+use @g_byte_array_new_take[NullablePointer[SGByteArray]](data': Pointer[U8] tag, len': U64)
 
 
 
@@ -361,7 +431,7 @@ use @g_byte_array_new_take[NullablePointer[GByteArray]](data': Pointer[U8] tag, 
 
   Arguments:
 */
-use @g_byte_array_new[NullablePointer[GByteArray]]()
+use @g_byte_array_new[NullablePointer[SGByteArray]]()
 
 
 
@@ -376,7 +446,7 @@ use @g_byte_array_new[NullablePointer[GByteArray]]()
     [PointerType size=64]->[FundamentalType(unsigned char) size=8]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_byte_array_prepend[NullablePointer[GByteArray]](array': NullablePointer[GByteArray] tag, data': Pointer[U8] tag, len': U32)
+use @g_byte_array_prepend[NullablePointer[SGByteArray]](array': NullablePointer[SGByteArray] tag, data': Pointer[U8] tag, len': U32)
 
 
 
@@ -389,7 +459,7 @@ use @g_byte_array_prepend[NullablePointer[GByteArray]](array': NullablePointer[G
   Arguments:
     [PointerType size=64]->[Struct size=128,fid: f19]
 */
-use @g_byte_array_ref[NullablePointer[GByteArray]](array': NullablePointer[GByteArray] tag)
+use @g_byte_array_ref[NullablePointer[SGByteArray]](array': NullablePointer[SGByteArray] tag)
 
 
 
@@ -403,7 +473,7 @@ use @g_byte_array_ref[NullablePointer[GByteArray]](array': NullablePointer[GByte
     [PointerType size=64]->[Struct size=128,fid: f19]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_byte_array_remove_index_fast[NullablePointer[GByteArray]](array': NullablePointer[GByteArray] tag, index': U32)
+use @g_byte_array_remove_index_fast[NullablePointer[SGByteArray]](array': NullablePointer[SGByteArray] tag, index': U32)
 
 
 
@@ -417,7 +487,7 @@ use @g_byte_array_remove_index_fast[NullablePointer[GByteArray]](array': Nullabl
     [PointerType size=64]->[Struct size=128,fid: f19]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_byte_array_remove_index[NullablePointer[GByteArray]](array': NullablePointer[GByteArray] tag, index': U32)
+use @g_byte_array_remove_index[NullablePointer[SGByteArray]](array': NullablePointer[SGByteArray] tag, index': U32)
 
 
 
@@ -432,7 +502,7 @@ use @g_byte_array_remove_index[NullablePointer[GByteArray]](array': NullablePoin
     [FundamentalType(unsigned int) size=32]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_byte_array_remove_range[NullablePointer[GByteArray]](array': NullablePointer[GByteArray] tag, index': U32, length': U32)
+use @g_byte_array_remove_range[NullablePointer[SGByteArray]](array': NullablePointer[SGByteArray] tag, index': U32, length': U32)
 
 
 
@@ -446,7 +516,7 @@ use @g_byte_array_remove_range[NullablePointer[GByteArray]](array': NullablePoin
     [PointerType size=64]->[Struct size=128,fid: f19]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_byte_array_set_size[NullablePointer[GByteArray]](array': NullablePointer[GByteArray] tag, length': U32)
+use @g_byte_array_set_size[NullablePointer[SGByteArray]](array': NullablePointer[SGByteArray] tag, length': U32)
 
 
 
@@ -459,7 +529,7 @@ use @g_byte_array_set_size[NullablePointer[GByteArray]](array': NullablePointer[
   Arguments:
     [FundamentalType(unsigned int) size=32]
 */
-use @g_byte_array_sized_new[NullablePointer[GByteArray]](reservedsize': U32)
+use @g_byte_array_sized_new[NullablePointer[SGByteArray]](reservedsize': U32)
 
 
 
@@ -473,7 +543,7 @@ use @g_byte_array_sized_new[NullablePointer[GByteArray]](reservedsize': U32)
     [PointerType size=64]->[Struct size=128,fid: f19]
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
 */
-use @g_byte_array_sort[None](array': NullablePointer[GByteArray] tag, comparefunc': Pointer[None] tag)
+use @g_byte_array_sort[None](array': NullablePointer[SGByteArray] tag, comparefunc': Pointer[None] tag)
 
 
 
@@ -488,7 +558,7 @@ use @g_byte_array_sort[None](array': NullablePointer[GByteArray] tag, comparefun
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_byte_array_sort_with_data[None](array': NullablePointer[GByteArray] tag, comparefunc': Pointer[None] tag, userdata': Pointer[None] tag)
+use @g_byte_array_sort_with_data[None](array': NullablePointer[SGByteArray] tag, comparefunc': Pointer[None] tag, userdata': Pointer[None] tag)
 
 
 
@@ -502,7 +572,7 @@ use @g_byte_array_sort_with_data[None](array': NullablePointer[GByteArray] tag, 
     [PointerType size=64]->[Struct size=128,fid: f19]
     [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
 */
-use @g_byte_array_steal[Pointer[U8]](array': NullablePointer[GByteArray] tag, len': Pointer[U64] tag)
+use @g_byte_array_steal[Pointer[U8]](array': NullablePointer[SGByteArray] tag, len': Pointer[U64] tag)
 
 
 
@@ -515,7 +585,78 @@ use @g_byte_array_steal[Pointer[U8]](array': NullablePointer[GByteArray] tag, le
   Arguments:
     [PointerType size=64]->[Struct size=128,fid: f19]
 */
-use @g_byte_array_unref[None](array': NullablePointer[GByteArray] tag)
+use @g_byte_array_unref[None](array': NullablePointer[SGByteArray] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/genums.h:271
+  Original Name: g_enum_complete_type_info03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/genums.h:271
+
+  Return Value: [FundamentalType(void) size=0]
+
+  Arguments:
+    [FundamentalType(long unsigned int) size=64]
+    [PointerType size=64]->[Struct size=576,fid: f133]
+    [PointerType size=64]->[Struct size=192,fid: f144]
+*/
+use @g_enum_complete_type_info[None](genumtype': U64, info': NullablePointer[SGTypeInfo] tag, constvalues': NullablePointer[SGEnumValue] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/genums.h:224
+  Original Name: g_enum_get_value_by_name03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/genums.h:224
+
+  Return Value: [PointerType size=64]->[Struct size=192,fid: f144]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=256,fid: f144]
+    [PointerType size=64]->[FundamentalType(char) size=8]
+*/
+use @g_enum_get_value_by_name[NullablePointer[SGEnumValue]](enumclass': NullablePointer[SGEnumClass] tag, name': Pointer[U8] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/genums.h:227
+  Original Name: g_enum_get_value_by_nick03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/genums.h:227
+
+  Return Value: [PointerType size=64]->[Struct size=192,fid: f144]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=256,fid: f144]
+    [PointerType size=64]->[FundamentalType(char) size=8]
+*/
+use @g_enum_get_value_by_nick[NullablePointer[SGEnumValue]](enumclass': NullablePointer[SGEnumClass] tag, nick': Pointer[U8] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/genums.h:221
+  Original Name: g_enum_get_value03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/genums.h:221
+
+  Return Value: [PointerType size=64]->[Struct size=192,fid: f144]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=256,fid: f144]
+    [FundamentalType(int) size=32]
+*/
+use @g_enum_get_value[NullablePointer[SGEnumValue]](enumclass': NullablePointer[SGEnumClass] tag, value': I32)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/genums.h:239
+  Original Name: g_enum_to_string03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/genums.h:239
+
+  Return Value: [PointerType size=64]->[FundamentalType(char) size=8]
+
+  Arguments:
+    [FundamentalType(long unsigned int) size=64]
+    [FundamentalType(int) size=32]
+*/
+use @g_enum_to_string[Pointer[U8]](genumtype': U64, value': I32)
 
 
 
@@ -530,7 +671,7 @@ use @g_byte_array_unref[None](array': NullablePointer[GByteArray] tag)
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_object_add_toggle_ref[None](object': NullablePointer[GObject] tag, notify': Pointer[None] tag, data': Pointer[None] tag)
+use @g_object_add_toggle_ref[None](object': NullablePointer[SGObject] tag, notify': Pointer[None] tag, data': Pointer[None] tag)
 
 
 
@@ -544,7 +685,7 @@ use @g_object_add_toggle_ref[None](object': NullablePointer[GObject] tag, notify
     [PointerType size=64]->[Struct size=192,fid: f141]
     [PointerType size=64]->[PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_object_add_weak_pointer[None](object': NullablePointer[GObject] tag, weakpointerlocation': NullablePointer[Pointer[None]] tag)
+use @g_object_add_weak_pointer[None](object': NullablePointer[SGObject] tag, weakpointerlocation': NullablePointer[Pointer[None]] tag)
 
 
 
@@ -558,7 +699,7 @@ use @g_object_add_weak_pointer[None](object': NullablePointer[GObject] tag, weak
     [PointerType size=64]->[Struct size=1088,fid: f141]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_object_class_find_property[NullablePointer[GParamSpec]](oclass': NullablePointer[GObjectClass] tag, propertyname': Pointer[U8] tag)
+use @g_object_class_find_property[NullablePointer[SGParamSpec]](oclass': NullablePointer[SGObjectClass] tag, propertyname': Pointer[U8] tag)
 
 
 
@@ -573,7 +714,7 @@ use @g_object_class_find_property[NullablePointer[GParamSpec]](oclass': Nullable
     [FundamentalType(unsigned int) size=32]
     [PointerType size=64]->[PointerType size=64]->[Struct size=576,fid: f135]
 */
-use @g_object_class_install_properties[None](oclass': NullablePointer[GObjectClass] tag, npspecs': U32, pspecs': Pointer[NullablePointer[GParamSpec]] tag)
+use @g_object_class_install_properties[None](oclass': NullablePointer[SGObjectClass] tag, npspecs': U32, pspecs': Pointer[NullablePointer[SGParamSpec]] tag)
 
 
 
@@ -588,7 +729,7 @@ use @g_object_class_install_properties[None](oclass': NullablePointer[GObjectCla
     [FundamentalType(unsigned int) size=32]
     [PointerType size=64]->[Struct size=576,fid: f135]
 */
-use @g_object_class_install_property[None](oclass': NullablePointer[GObjectClass] tag, propertyid': U32, pspec': NullablePointer[GParamSpec] tag)
+use @g_object_class_install_property[None](oclass': NullablePointer[SGObjectClass] tag, propertyid': U32, pspec': NullablePointer[SGParamSpec] tag)
 
 
 
@@ -602,7 +743,7 @@ use @g_object_class_install_property[None](oclass': NullablePointer[GObjectClass
     [PointerType size=64]->[Struct size=1088,fid: f141]
     [PointerType size=64]->[FundamentalType(unsigned int) size=32]
 */
-use @g_object_class_list_properties[Pointer[NullablePointer[GParamSpec]]](oclass': NullablePointer[GObjectClass] tag, nproperties': Pointer[U32] tag)
+use @g_object_class_list_properties[Pointer[NullablePointer[SGParamSpec]]](oclass': NullablePointer[SGObjectClass] tag, nproperties': Pointer[U32] tag)
 
 
 
@@ -617,7 +758,7 @@ use @g_object_class_list_properties[Pointer[NullablePointer[GParamSpec]]](oclass
     [FundamentalType(unsigned int) size=32]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_object_class_override_property[None](oclass': NullablePointer[GObjectClass] tag, propertyid': U32, name': Pointer[U8] tag)
+use @g_object_class_override_property[None](oclass': NullablePointer[SGObjectClass] tag, propertyid': U32, name': Pointer[U8] tag)
 
 
 
@@ -675,7 +816,7 @@ use @g_object_disconnect[None](object': Pointer[None] tag, signalspec': Pointer[
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_object_dup_data[Pointer[None]](object': NullablePointer[GObject] tag, key': Pointer[U8] tag, dupfunc': Pointer[None] tag, userdata': Pointer[None] tag)
+use @g_object_dup_data[Pointer[None]](object': NullablePointer[SGObject] tag, key': Pointer[U8] tag, dupfunc': Pointer[None] tag, userdata': Pointer[None] tag)
 
 
 
@@ -691,7 +832,7 @@ use @g_object_dup_data[Pointer[None]](object': NullablePointer[GObject] tag, key
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_object_dup_qdata[Pointer[None]](object': NullablePointer[GObject] tag, quark': U32, dupfunc': Pointer[None] tag, userdata': Pointer[None] tag)
+use @g_object_dup_qdata[Pointer[None]](object': NullablePointer[SGObject] tag, quark': U32, dupfunc': Pointer[None] tag, userdata': Pointer[None] tag)
 
 
 
@@ -704,7 +845,7 @@ use @g_object_dup_qdata[Pointer[None]](object': NullablePointer[GObject] tag, qu
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f141]
 */
-use @g_object_force_floating[None](object': NullablePointer[GObject] tag)
+use @g_object_force_floating[None](object': NullablePointer[SGObject] tag)
 
 
 
@@ -717,7 +858,7 @@ use @g_object_force_floating[None](object': NullablePointer[GObject] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f141]
 */
-use @g_object_freeze_notify[None](object': NullablePointer[GObject] tag)
+use @g_object_freeze_notify[None](object': NullablePointer[SGObject] tag)
 
 
 
@@ -731,7 +872,7 @@ use @g_object_freeze_notify[None](object': NullablePointer[GObject] tag)
     [PointerType size=64]->[Struct size=192,fid: f141]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_object_get_data[Pointer[None]](object': NullablePointer[GObject] tag, key': Pointer[U8] tag)
+use @g_object_get_data[Pointer[None]](object': NullablePointer[SGObject] tag, key': Pointer[U8] tag)
 
 
 
@@ -746,7 +887,7 @@ use @g_object_get_data[Pointer[None]](object': NullablePointer[GObject] tag, key
     [PointerType size=64]->[FundamentalType(char) size=8]
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_object_get_property[None](object': NullablePointer[GObject] tag, propertyname': Pointer[U8] tag, value': NullablePointer[GValue] tag)
+use @g_object_get_property[None](object': NullablePointer[SGObject] tag, propertyname': Pointer[U8] tag, value': NullablePointer[SGValue] tag)
 
 
 
@@ -760,7 +901,7 @@ use @g_object_get_property[None](object': NullablePointer[GObject] tag, property
     [PointerType size=64]->[Struct size=192,fid: f141]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_object_get_qdata[Pointer[None]](object': NullablePointer[GObject] tag, quark': U32)
+use @g_object_get_qdata[Pointer[None]](object': NullablePointer[SGObject] tag, quark': U32)
 
 
 
@@ -800,7 +941,7 @@ use @g_object_get[None](object': Pointer[None] tag, firstpropertyname': Pointer[
     [PointerType size=64]->[FundamentalType(void) size=0]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_object_interface_find_property[NullablePointer[GParamSpec]](giface': Pointer[None] tag, propertyname': Pointer[U8] tag)
+use @g_object_interface_find_property[NullablePointer[SGParamSpec]](giface': Pointer[None] tag, propertyname': Pointer[U8] tag)
 
 
 
@@ -814,7 +955,7 @@ use @g_object_interface_find_property[NullablePointer[GParamSpec]](giface': Poin
     [PointerType size=64]->[FundamentalType(void) size=0]
     [PointerType size=64]->[Struct size=576,fid: f135]
 */
-use @g_object_interface_install_property[None](giface': Pointer[None] tag, pspec': NullablePointer[GParamSpec] tag)
+use @g_object_interface_install_property[None](giface': Pointer[None] tag, pspec': NullablePointer[SGParamSpec] tag)
 
 
 
@@ -828,7 +969,7 @@ use @g_object_interface_install_property[None](giface': Pointer[None] tag, pspec
     [PointerType size=64]->[FundamentalType(void) size=0]
     [PointerType size=64]->[FundamentalType(unsigned int) size=32]
 */
-use @g_object_interface_list_properties[Pointer[NullablePointer[GParamSpec]]](giface': Pointer[None] tag, npropertiesp': Pointer[U32] tag)
+use @g_object_interface_list_properties[Pointer[NullablePointer[SGParamSpec]]](giface': Pointer[None] tag, npropertiesp': Pointer[U32] tag)
 
 
 
@@ -870,7 +1011,7 @@ use @g_object_new[Pointer[None]](objecttype': U64, firstpropertyname': Pointer[U
     [FundamentalType(unsigned int) size=32]
     [PointerType size=64]->[Struct size=256,fid: f135]
 */
-use @g_object_newv[Pointer[None]](objecttype': U64, nparameters': U32, parameters': NullablePointer[GParameter] tag)
+use @g_object_newv[Pointer[None]](objecttype': U64, nparameters': U32, parameters': NullablePointer[SGParameter] tag)
 
 
 
@@ -884,7 +1025,7 @@ use @g_object_newv[Pointer[None]](objecttype': U64, nparameters': U32, parameter
     [PointerType size=64]->[Struct size=192,fid: f141]
     [PointerType size=64]->[Struct size=576,fid: f135]
 */
-use @g_object_notify_by_pspec[None](object': NullablePointer[GObject] tag, pspec': NullablePointer[GParamSpec] tag)
+use @g_object_notify_by_pspec[None](object': NullablePointer[SGObject] tag, pspec': NullablePointer[SGParamSpec] tag)
 
 
 
@@ -898,7 +1039,7 @@ use @g_object_notify_by_pspec[None](object': NullablePointer[GObject] tag, pspec
     [PointerType size=64]->[Struct size=192,fid: f141]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_object_notify[None](object': NullablePointer[GObject] tag, propertyname': Pointer[U8] tag)
+use @g_object_notify[None](object': NullablePointer[SGObject] tag, propertyname': Pointer[U8] tag)
 
 
 
@@ -939,7 +1080,7 @@ use @g_object_ref[Pointer[None]](object': Pointer[None] tag)
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_object_remove_toggle_ref[None](object': NullablePointer[GObject] tag, notify': Pointer[None] tag, data': Pointer[None] tag)
+use @g_object_remove_toggle_ref[None](object': NullablePointer[SGObject] tag, notify': Pointer[None] tag, data': Pointer[None] tag)
 
 
 
@@ -953,7 +1094,7 @@ use @g_object_remove_toggle_ref[None](object': NullablePointer[GObject] tag, not
     [PointerType size=64]->[Struct size=192,fid: f141]
     [PointerType size=64]->[PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_object_remove_weak_pointer[None](object': NullablePointer[GObject] tag, weakpointerlocation': NullablePointer[Pointer[None]] tag)
+use @g_object_remove_weak_pointer[None](object': NullablePointer[SGObject] tag, weakpointerlocation': NullablePointer[Pointer[None]] tag)
 
 
 
@@ -971,7 +1112,7 @@ use @g_object_remove_weak_pointer[None](object': NullablePointer[GObject] tag, w
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[PointerType size=64]->[FunctionType]  WRITE MANUALLY
 */
-use @g_object_replace_data[I32](object': NullablePointer[GObject] tag, key': Pointer[U8] tag, oldval': Pointer[None] tag, newval': Pointer[None] tag, destroy': Pointer[None] tag, olddestroy': NullablePointer[Pointer[None]] tag)
+use @g_object_replace_data[I32](object': NullablePointer[SGObject] tag, key': Pointer[U8] tag, oldval': Pointer[None] tag, newval': Pointer[None] tag, destroy': Pointer[None] tag, olddestroy': NullablePointer[Pointer[None]] tag)
 
 
 
@@ -989,7 +1130,7 @@ use @g_object_replace_data[I32](object': NullablePointer[GObject] tag, key': Poi
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[PointerType size=64]->[FunctionType]  WRITE MANUALLY
 */
-use @g_object_replace_qdata[I32](object': NullablePointer[GObject] tag, quark': U32, oldval': Pointer[None] tag, newval': Pointer[None] tag, destroy': Pointer[None] tag, olddestroy': NullablePointer[Pointer[None]] tag)
+use @g_object_replace_qdata[I32](object': NullablePointer[SGObject] tag, quark': U32, oldval': Pointer[None] tag, newval': Pointer[None] tag, destroy': Pointer[None] tag, olddestroy': NullablePointer[Pointer[None]] tag)
 
 
 
@@ -1002,7 +1143,7 @@ use @g_object_replace_qdata[I32](object': NullablePointer[GObject] tag, quark': 
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f141]
 */
-use @g_object_run_dispose[None](object': NullablePointer[GObject] tag)
+use @g_object_run_dispose[None](object': NullablePointer[SGObject] tag)
 
 
 
@@ -1018,7 +1159,7 @@ use @g_object_run_dispose[None](object': NullablePointer[GObject] tag)
     [PointerType size=64]->[FundamentalType(void) size=0]
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
 */
-use @g_object_set_data_full[None](object': NullablePointer[GObject] tag, key': Pointer[U8] tag, data': Pointer[None] tag, destroy': Pointer[None] tag)
+use @g_object_set_data_full[None](object': NullablePointer[SGObject] tag, key': Pointer[U8] tag, data': Pointer[None] tag, destroy': Pointer[None] tag)
 
 
 
@@ -1033,7 +1174,7 @@ use @g_object_set_data_full[None](object': NullablePointer[GObject] tag, key': P
     [PointerType size=64]->[FundamentalType(char) size=8]
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_object_set_data[None](object': NullablePointer[GObject] tag, key': Pointer[U8] tag, data': Pointer[None] tag)
+use @g_object_set_data[None](object': NullablePointer[SGObject] tag, key': Pointer[U8] tag, data': Pointer[None] tag)
 
 
 
@@ -1048,7 +1189,7 @@ use @g_object_set_data[None](object': NullablePointer[GObject] tag, key': Pointe
     [PointerType size=64]->[FundamentalType(char) size=8]
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_object_set_property[None](object': NullablePointer[GObject] tag, propertyname': Pointer[U8] tag, value': NullablePointer[GValue] tag)
+use @g_object_set_property[None](object': NullablePointer[SGObject] tag, propertyname': Pointer[U8] tag, value': NullablePointer[SGValue] tag)
 
 
 
@@ -1064,7 +1205,7 @@ use @g_object_set_property[None](object': NullablePointer[GObject] tag, property
     [PointerType size=64]->[FundamentalType(void) size=0]
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
 */
-use @g_object_set_qdata_full[None](object': NullablePointer[GObject] tag, quark': U32, data': Pointer[None] tag, destroy': Pointer[None] tag)
+use @g_object_set_qdata_full[None](object': NullablePointer[SGObject] tag, quark': U32, data': Pointer[None] tag, destroy': Pointer[None] tag)
 
 
 
@@ -1079,7 +1220,7 @@ use @g_object_set_qdata_full[None](object': NullablePointer[GObject] tag, quark'
     [FundamentalType(unsigned int) size=32]
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_object_set_qdata[None](object': NullablePointer[GObject] tag, quark': U32, data': Pointer[None] tag)
+use @g_object_set_qdata[None](object': NullablePointer[SGObject] tag, quark': U32, data': Pointer[None] tag)
 
 
 
@@ -1107,7 +1248,7 @@ use @g_object_set[None](object': Pointer[None] tag, firstpropertyname': Pointer[
     [PointerType size=64]->[Struct size=192,fid: f141]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_object_steal_data[Pointer[None]](object': NullablePointer[GObject] tag, key': Pointer[U8] tag)
+use @g_object_steal_data[Pointer[None]](object': NullablePointer[SGObject] tag, key': Pointer[U8] tag)
 
 
 
@@ -1121,7 +1262,7 @@ use @g_object_steal_data[Pointer[None]](object': NullablePointer[GObject] tag, k
     [PointerType size=64]->[Struct size=192,fid: f141]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_object_steal_qdata[Pointer[None]](object': NullablePointer[GObject] tag, quark': U32)
+use @g_object_steal_qdata[Pointer[None]](object': NullablePointer[SGObject] tag, quark': U32)
 
 
 
@@ -1147,7 +1288,7 @@ use @g_object_take_ref[Pointer[None]](object': Pointer[None] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f141]
 */
-use @g_object_thaw_notify[None](object': NullablePointer[GObject] tag)
+use @g_object_thaw_notify[None](object': NullablePointer[SGObject] tag)
 
 
 
@@ -1175,7 +1316,7 @@ use @g_object_unref[None](object': Pointer[None] tag)
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_object_weak_ref[None](object': NullablePointer[GObject] tag, notify': Pointer[None] tag, data': Pointer[None] tag)
+use @g_object_weak_ref[None](object': NullablePointer[SGObject] tag, notify': Pointer[None] tag, data': Pointer[None] tag)
 
 
 
@@ -1190,7 +1331,437 @@ use @g_object_weak_ref[None](object': NullablePointer[GObject] tag, notify': Poi
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_object_weak_unref[None](object': NullablePointer[GObject] tag, notify': Pointer[None] tag, data': Pointer[None] tag)
+use @g_object_weak_unref[None](object': NullablePointer[SGObject] tag, notify': Pointer[None] tag, data': Pointer[None] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:87
+  Original Name: g_resource_enumerate_children03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:87
+
+  Return Value: [PointerType size=64]->[PointerType size=64]->[FundamentalType(char) size=8]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=,fid: f161]
+    [PointerType size=64]->[FundamentalType(char) size=8]
+    [Enumeration size=32,fid: f159]
+    [PointerType size=64]->[PointerType size=64]->[Struct size=128,fid: f23]
+*/
+use @g_resource_enumerate_children[Pointer[Pointer[U8]]](resource': NullablePointer[SGResource] tag, path': Pointer[U8] tag, lookupflags': I32, error': Pointer[NullablePointer[SGError]] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:92
+  Original Name: g_resource_get_info03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:92
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=,fid: f161]
+    [PointerType size=64]->[FundamentalType(char) size=8]
+    [Enumeration size=32,fid: f159]
+    [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
+    [PointerType size=64]->[FundamentalType(unsigned int) size=32]
+    [PointerType size=64]->[PointerType size=64]->[Struct size=128,fid: f23]
+*/
+use @g_resource_get_info[I32](resource': NullablePointer[SGResource] tag, path': Pointer[U8] tag, lookupflags': I32, size': Pointer[U64] tag, flags': Pointer[U32] tag, error': Pointer[NullablePointer[SGError]] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:65
+  Original Name: g_resource_get_type03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:65
+
+  Return Value: [FundamentalType(long unsigned int) size=64]
+
+  Arguments:
+*/
+use @g_resource_get_type[U64]()
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:74
+  Original Name: g_resource_load03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:74
+
+  Return Value: [PointerType size=64]->[Struct size=,fid: f161]
+
+  Arguments:
+    [PointerType size=64]->[FundamentalType(char) size=8]
+    [PointerType size=64]->[PointerType size=64]->[Struct size=128,fid: f23]
+*/
+use @g_resource_load[NullablePointer[SGResource]](filename': Pointer[U8] tag, error': Pointer[NullablePointer[SGError]] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:82
+  Original Name: g_resource_lookup_data03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:82
+
+  Return Value: [PointerType size=64]->[Struct size=,fid: f19]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=,fid: f161]
+    [PointerType size=64]->[FundamentalType(char) size=8]
+    [Enumeration size=32,fid: f159]
+    [PointerType size=64]->[PointerType size=64]->[Struct size=128,fid: f23]
+*/
+use @g_resource_lookup_data[NullablePointer[SGBytes]](resource': NullablePointer[SGResource] tag, path': Pointer[U8] tag, lookupflags': I32, error': Pointer[NullablePointer[SGError]] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gioenumtypes.h:95
+  Original Name: g_resource_lookup_flags_get_type03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gioenumtypes.h:95
+
+  Return Value: [FundamentalType(long unsigned int) size=64]
+
+  Arguments:
+*/
+use @g_resource_lookup_flags_get_type[U64]()
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:67
+  Original Name: g_resource_new_from_data03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:67
+
+  Return Value: [PointerType size=64]->[Struct size=,fid: f161]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=,fid: f19]
+    [PointerType size=64]->[PointerType size=64]->[Struct size=128,fid: f23]
+*/
+use @g_resource_new_from_data[NullablePointer[SGResource]](data': NullablePointer[SGBytes] tag, error': Pointer[NullablePointer[SGError]] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:112
+  Original Name: g_resources_enumerate_children03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:112
+
+  Return Value: [PointerType size=64]->[PointerType size=64]->[FundamentalType(char) size=8]
+
+  Arguments:
+    [PointerType size=64]->[FundamentalType(char) size=8]
+    [Enumeration size=32,fid: f159]
+    [PointerType size=64]->[PointerType size=64]->[Struct size=128,fid: f23]
+*/
+use @g_resources_enumerate_children[Pointer[Pointer[U8]]](path': Pointer[U8] tag, lookupflags': I32, error': Pointer[NullablePointer[SGError]] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:116
+  Original Name: g_resources_get_info03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:116
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[FundamentalType(char) size=8]
+    [Enumeration size=32,fid: f159]
+    [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
+    [PointerType size=64]->[FundamentalType(unsigned int) size=32]
+    [PointerType size=64]->[PointerType size=64]->[Struct size=128,fid: f23]
+*/
+use @g_resources_get_info[I32](path': Pointer[U8] tag, lookupflags': I32, size': Pointer[U64] tag, flags': Pointer[U32] tag, error': Pointer[NullablePointer[SGError]] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:108
+  Original Name: g_resources_lookup_data03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gio/gresource.h:108
+
+  Return Value: [PointerType size=64]->[Struct size=,fid: f19]
+
+  Arguments:
+    [PointerType size=64]->[FundamentalType(char) size=8]
+    [Enumeration size=32,fid: f159]
+    [PointerType size=64]->[PointerType size=64]->[Struct size=128,fid: f23]
+*/
+use @g_resources_lookup_data[NullablePointer[SGBytes]](path': Pointer[U8] tag, lookupflags': I32, error': Pointer[NullablePointer[SGError]] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2478
+  Original Name: g_type_check_class_cast03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2478
+
+  Return Value: [PointerType size=64]->[Struct size=64,fid: f133]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=64,fid: f133]
+    [FundamentalType(long unsigned int) size=64]
+*/
+use @g_type_check_class_cast[NullablePointer[SGTypeClass]](gclass': NullablePointer[SGTypeClass] tag, isatype': U64)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2481
+  Original Name: g_type_check_class_is_a03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2481
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=64,fid: f133]
+    [FundamentalType(long unsigned int) size=64]
+*/
+use @g_type_check_class_is_a[I32](gclass': NullablePointer[SGTypeClass] tag, isatype': U64)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2469
+  Original Name: g_type_check_instance_cast03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2469
+
+  Return Value: [PointerType size=64]->[Struct size=64,fid: f133]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=64,fid: f133]
+    [FundamentalType(long unsigned int) size=64]
+*/
+use @g_type_check_instance_cast[NullablePointer[SGTypeInstance]](instance': NullablePointer[SGTypeInstance] tag, ifacetype': U64)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2472
+  Original Name: g_type_check_instance_is_a03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2472
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=64,fid: f133]
+    [FundamentalType(long unsigned int) size=64]
+*/
+use @g_type_check_instance_is_a[I32](instance': NullablePointer[SGTypeInstance] tag, ifacetype': U64)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2475
+  Original Name: g_type_check_instance_is_fundamentally_a03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2475
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=64,fid: f133]
+    [FundamentalType(long unsigned int) size=64]
+*/
+use @g_type_check_instance_is_fundamentally_a[I32](instance': NullablePointer[SGTypeInstance] tag, fundamentaltype': U64)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2467
+  Original Name: g_type_check_instance03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2467
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=64,fid: f133]
+*/
+use @g_type_check_instance[I32](instance': NullablePointer[SGTypeInstance] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2484
+  Original Name: g_type_check_is_value_type03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2484
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [FundamentalType(long unsigned int) size=64]
+*/
+use @g_type_check_is_value_type[I32](type': U64)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2488
+  Original Name: g_type_check_value_holds03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2488
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=192,fid: f134]
+    [FundamentalType(long unsigned int) size=64]
+*/
+use @g_type_check_value_holds[I32](value': NullablePointer[SGValue] tag, type': U64)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2486
+  Original Name: g_type_check_value03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2486
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=192,fid: f134]
+*/
+use @g_type_check_value[I32](value': NullablePointer[SGValue] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:762
+  Original Name: g_type_children03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:762
+
+  Return Value: [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
+
+  Arguments:
+    [FundamentalType(long unsigned int) size=64]
+    [PointerType size=64]->[FundamentalType(unsigned int) size=32]
+*/
+use @g_type_children[Pointer[U64]](type': U64, nchildren': Pointer[U32] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:726
+  Original Name: g_type_depth03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:726
+
+  Return Value: [FundamentalType(unsigned int) size=32]
+
+  Arguments:
+    [FundamentalType(long unsigned int) size=64]
+*/
+use @g_type_depth[U32](type': U64)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:1378
+  Original Name: g_type_ensure03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:1378
+
+  Return Value: [FundamentalType(void) size=0]
+
+  Arguments:
+    [FundamentalType(long unsigned int) size=64]
+*/
+use @g_type_ensure[None](type': U64)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:722
+  Original Name: g_type_from_name03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:722
+
+  Return Value: [FundamentalType(long unsigned int) size=64]
+
+  Arguments:
+    [PointerType size=64]->[FundamentalType(char) size=8]
+*/
+use @g_type_from_name[U64](name': Pointer[U8] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2437
+  Original Name: g_type_fundamental_next03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2437
+
+  Return Value: [FundamentalType(long unsigned int) size=64]
+
+  Arguments:
+*/
+use @g_type_fundamental_next[U64]()
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2439
+  Original Name: g_type_fundamental03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2439
+
+  Return Value: [FundamentalType(long unsigned int) size=64]
+
+  Arguments:
+    [FundamentalType(long unsigned int) size=64]
+*/
+use @g_type_fundamental[U64](typeid': U64)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:731
+  Original Name: g_type_is_a03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:731
+
+  Return Value: [FundamentalType(int) size=32]
+
+  Arguments:
+    [FundamentalType(long unsigned int) size=64]
+    [FundamentalType(long unsigned int) size=64]
+*/
+use @g_type_is_a[I32](type': U64, isatype': U64)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2499
+  Original Name: g_type_name_from_class03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2499
+
+  Return Value: [PointerType size=64]->[FundamentalType(char) size=8]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=64,fid: f133]
+*/
+use @g_type_name_from_class[Pointer[U8]](gclass': NullablePointer[SGTypeClass] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2497
+  Original Name: g_type_name_from_instance03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:2497
+
+  Return Value: [PointerType size=64]->[FundamentalType(char) size=8]
+
+  Arguments:
+    [PointerType size=64]->[Struct size=64,fid: f133]
+*/
+use @g_type_name_from_instance[Pointer[U8]](instance': NullablePointer[SGTypeInstance] tag)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:718
+  Original Name: g_type_name03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:718
+
+  Return Value: [PointerType size=64]->[FundamentalType(char) size=8]
+
+  Arguments:
+    [FundamentalType(long unsigned int) size=64]
+*/
+use @g_type_name[Pointer[U8]](type': U64)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:724
+  Original Name: g_type_parent03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:724
+
+  Return Value: [FundamentalType(long unsigned int) size=64]
+
+  Arguments:
+    [FundamentalType(long unsigned int) size=64]
+*/
+use @g_type_parent[U64](type': U64)
+
+
+
+/*
+  Source: 03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:777
+  Original Name: g_type_query03dsp8rf3nic826nlw090fnd3wzfcabk-glib-2.74.1-dev/include/glib-2.0/gobject/gtype.h:777
+
+  Return Value: [FundamentalType(void) size=0]
+
+  Arguments:
+    [FundamentalType(long unsigned int) size=64]
+    [PointerType size=64]->[Struct size=192,fid: f133]
+*/
+use @g_type_query[None](type': U64, query': NullablePointer[SGTypeQuery] tag)
 
 
 
@@ -1204,7 +1775,7 @@ use @g_object_weak_unref[None](object': NullablePointer[GObject] tag, notify': P
     [PointerType size=64]->[Struct size=192,fid: f151]
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_array_append[NullablePointer[GValueArray]](valuearray': NullablePointer[GValueArray] tag, value': NullablePointer[GValue] tag)
+use @g_value_array_append[NullablePointer[SGValueArray]](valuearray': NullablePointer[SGValueArray] tag, value': NullablePointer[SGValue] tag)
 
 
 
@@ -1217,7 +1788,7 @@ use @g_value_array_append[NullablePointer[GValueArray]](valuearray': NullablePoi
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f151]
 */
-use @g_value_array_copy[NullablePointer[GValueArray]](valuearray': NullablePointer[GValueArray] tag)
+use @g_value_array_copy[NullablePointer[SGValueArray]](valuearray': NullablePointer[SGValueArray] tag)
 
 
 
@@ -1230,7 +1801,7 @@ use @g_value_array_copy[NullablePointer[GValueArray]](valuearray': NullablePoint
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f151]
 */
-use @g_value_array_free[None](valuearray': NullablePointer[GValueArray] tag)
+use @g_value_array_free[None](valuearray': NullablePointer[SGValueArray] tag)
 
 
 
@@ -1244,7 +1815,7 @@ use @g_value_array_free[None](valuearray': NullablePointer[GValueArray] tag)
     [PointerType size=64]->[Struct size=192,fid: f151]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_value_array_get_nth[NullablePointer[GValue]](valuearray': NullablePointer[GValueArray] tag, index': U32)
+use @g_value_array_get_nth[NullablePointer[SGValue]](valuearray': NullablePointer[SGValueArray] tag, index': U32)
 
 
 
@@ -1271,7 +1842,7 @@ use @g_value_array_get_type[U64]()
     [FundamentalType(unsigned int) size=32]
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_array_insert[NullablePointer[GValueArray]](valuearray': NullablePointer[GValueArray] tag, index': U32, value': NullablePointer[GValue] tag)
+use @g_value_array_insert[NullablePointer[SGValueArray]](valuearray': NullablePointer[SGValueArray] tag, index': U32, value': NullablePointer[SGValue] tag)
 
 
 
@@ -1284,7 +1855,7 @@ use @g_value_array_insert[NullablePointer[GValueArray]](valuearray': NullablePoi
   Arguments:
     [FundamentalType(unsigned int) size=32]
 */
-use @g_value_array_new[NullablePointer[GValueArray]](nprealloced': U32)
+use @g_value_array_new[NullablePointer[SGValueArray]](nprealloced': U32)
 
 
 
@@ -1298,7 +1869,7 @@ use @g_value_array_new[NullablePointer[GValueArray]](nprealloced': U32)
     [PointerType size=64]->[Struct size=192,fid: f151]
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_array_prepend[NullablePointer[GValueArray]](valuearray': NullablePointer[GValueArray] tag, value': NullablePointer[GValue] tag)
+use @g_value_array_prepend[NullablePointer[SGValueArray]](valuearray': NullablePointer[SGValueArray] tag, value': NullablePointer[SGValue] tag)
 
 
 
@@ -1312,7 +1883,7 @@ use @g_value_array_prepend[NullablePointer[GValueArray]](valuearray': NullablePo
     [PointerType size=64]->[Struct size=192,fid: f151]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_value_array_remove[NullablePointer[GValueArray]](valuearray': NullablePointer[GValueArray] tag, index': U32)
+use @g_value_array_remove[NullablePointer[SGValueArray]](valuearray': NullablePointer[SGValueArray] tag, index': U32)
 
 
 
@@ -1326,7 +1897,7 @@ use @g_value_array_remove[NullablePointer[GValueArray]](valuearray': NullablePoi
     [PointerType size=64]->[Struct size=192,fid: f151]
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
 */
-use @g_value_array_sort[NullablePointer[GValueArray]](valuearray': NullablePointer[GValueArray] tag, comparefunc': Pointer[None] tag)
+use @g_value_array_sort[NullablePointer[SGValueArray]](valuearray': NullablePointer[SGValueArray] tag, comparefunc': Pointer[None] tag)
 
 
 
@@ -1341,7 +1912,7 @@ use @g_value_array_sort[NullablePointer[GValueArray]](valuearray': NullablePoint
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_value_array_sort_with_data[NullablePointer[GValueArray]](valuearray': NullablePointer[GValueArray] tag, comparefunc': Pointer[None] tag, userdata': Pointer[None] tag)
+use @g_value_array_sort_with_data[NullablePointer[SGValueArray]](valuearray': NullablePointer[SGValueArray] tag, comparefunc': Pointer[None] tag, userdata': Pointer[None] tag)
 
 
 
@@ -1355,7 +1926,7 @@ use @g_value_array_sort_with_data[NullablePointer[GValueArray]](valuearray': Nul
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_copy[None](srcvalue': NullablePointer[GValue] tag, destvalue': NullablePointer[GValue] tag)
+use @g_value_copy[None](srcvalue': NullablePointer[SGValue] tag, destvalue': NullablePointer[SGValue] tag)
 
 
 
@@ -1368,7 +1939,7 @@ use @g_value_copy[None](srcvalue': NullablePointer[GValue] tag, destvalue': Null
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_dup_boxed[Pointer[None]](value': NullablePointer[GValue] tag)
+use @g_value_dup_boxed[Pointer[None]](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1381,7 +1952,7 @@ use @g_value_dup_boxed[Pointer[None]](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_dup_object[Pointer[None]](value': NullablePointer[GValue] tag)
+use @g_value_dup_object[Pointer[None]](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1394,7 +1965,7 @@ use @g_value_dup_object[Pointer[None]](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_dup_param[NullablePointer[GParamSpec]](value': NullablePointer[GValue] tag)
+use @g_value_dup_param[NullablePointer[SGParamSpec]](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1407,7 +1978,7 @@ use @g_value_dup_param[NullablePointer[GParamSpec]](value': NullablePointer[GVal
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_dup_string[Pointer[U8]](value': NullablePointer[GValue] tag)
+use @g_value_dup_string[Pointer[U8]](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1420,7 +1991,7 @@ use @g_value_dup_string[Pointer[U8]](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_dup_variant[NullablePointer[GVariant]](value': NullablePointer[GValue] tag)
+use @g_value_dup_variant[NullablePointer[SGVariant]](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1433,7 +2004,7 @@ use @g_value_dup_variant[NullablePointer[GVariant]](value': NullablePointer[GVal
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_fits_pointer[I32](value': NullablePointer[GValue] tag)
+use @g_value_fits_pointer[I32](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1446,7 +2017,7 @@ use @g_value_fits_pointer[I32](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_boolean[I32](value': NullablePointer[GValue] tag)
+use @g_value_get_boolean[I32](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1459,7 +2030,7 @@ use @g_value_get_boolean[I32](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_boxed[Pointer[None]](value': NullablePointer[GValue] tag)
+use @g_value_get_boxed[Pointer[None]](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1472,7 +2043,7 @@ use @g_value_get_boxed[Pointer[None]](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_char[U8](value': NullablePointer[GValue] tag)
+use @g_value_get_char[U8](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1485,7 +2056,7 @@ use @g_value_get_char[U8](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_double[F64](value': NullablePointer[GValue] tag)
+use @g_value_get_double[F64](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1498,7 +2069,7 @@ use @g_value_get_double[F64](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_enum[I32](value': NullablePointer[GValue] tag)
+use @g_value_get_enum[I32](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1511,7 +2082,7 @@ use @g_value_get_enum[I32](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_flags[U32](value': NullablePointer[GValue] tag)
+use @g_value_get_flags[U32](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1524,7 +2095,7 @@ use @g_value_get_flags[U32](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_float[F32](value': NullablePointer[GValue] tag)
+use @g_value_get_float[F32](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1537,7 +2108,7 @@ use @g_value_get_float[F32](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_gtype[U64](value': NullablePointer[GValue] tag)
+use @g_value_get_gtype[U64](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1550,7 +2121,7 @@ use @g_value_get_gtype[U64](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_int64[I64](value': NullablePointer[GValue] tag)
+use @g_value_get_int64[I64](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1563,7 +2134,7 @@ use @g_value_get_int64[I64](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_int[I32](value': NullablePointer[GValue] tag)
+use @g_value_get_int[I32](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1576,7 +2147,7 @@ use @g_value_get_int[I32](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_long[I64](value': NullablePointer[GValue] tag)
+use @g_value_get_long[I64](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1589,7 +2160,7 @@ use @g_value_get_long[I64](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_object[Pointer[None]](value': NullablePointer[GValue] tag)
+use @g_value_get_object[Pointer[None]](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1602,7 +2173,7 @@ use @g_value_get_object[Pointer[None]](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_param[NullablePointer[GParamSpec]](value': NullablePointer[GValue] tag)
+use @g_value_get_param[NullablePointer[SGParamSpec]](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1615,7 +2186,7 @@ use @g_value_get_param[NullablePointer[GParamSpec]](value': NullablePointer[GVal
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_pointer[Pointer[None]](value': NullablePointer[GValue] tag)
+use @g_value_get_pointer[Pointer[None]](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1628,7 +2199,7 @@ use @g_value_get_pointer[Pointer[None]](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_schar[I8](value': NullablePointer[GValue] tag)
+use @g_value_get_schar[I8](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1641,7 +2212,7 @@ use @g_value_get_schar[I8](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_string[Pointer[U8]](value': NullablePointer[GValue] tag)
+use @g_value_get_string[Pointer[U8]](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1666,7 +2237,7 @@ use @g_value_get_type[U64]()
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_uchar[U8](value': NullablePointer[GValue] tag)
+use @g_value_get_uchar[U8](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1679,7 +2250,7 @@ use @g_value_get_uchar[U8](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_uint64[U64](value': NullablePointer[GValue] tag)
+use @g_value_get_uint64[U64](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1692,7 +2263,7 @@ use @g_value_get_uint64[U64](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_uint[U32](value': NullablePointer[GValue] tag)
+use @g_value_get_uint[U32](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1705,7 +2276,7 @@ use @g_value_get_uint[U32](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_ulong[U64](value': NullablePointer[GValue] tag)
+use @g_value_get_ulong[U64](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1718,7 +2289,7 @@ use @g_value_get_ulong[U64](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_get_variant[NullablePointer[GVariant]](value': NullablePointer[GValue] tag)
+use @g_value_get_variant[NullablePointer[SGVariant]](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1732,7 +2303,7 @@ use @g_value_get_variant[NullablePointer[GVariant]](value': NullablePointer[GVal
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_value_init_from_instance[None](value': NullablePointer[GValue] tag, instance': Pointer[None] tag)
+use @g_value_init_from_instance[None](value': NullablePointer[SGValue] tag, instance': Pointer[None] tag)
 
 
 
@@ -1746,7 +2317,7 @@ use @g_value_init_from_instance[None](value': NullablePointer[GValue] tag, insta
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(long unsigned int) size=64]
 */
-use @g_value_init[NullablePointer[GValue]](value': NullablePointer[GValue] tag, gtype': U64)
+use @g_value_init[NullablePointer[SGValue]](value': NullablePointer[SGValue] tag, gtype': U64)
 
 
 
@@ -1759,7 +2330,7 @@ use @g_value_init[NullablePointer[GValue]](value': NullablePointer[GValue] tag, 
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_peek_pointer[Pointer[None]](value': NullablePointer[GValue] tag)
+use @g_value_peek_pointer[Pointer[None]](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1787,7 +2358,7 @@ use @g_value_register_transform_func[None](srctype': U64, desttype': U64, transf
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_reset[NullablePointer[GValue]](value': NullablePointer[GValue] tag)
+use @g_value_reset[NullablePointer[SGValue]](value': NullablePointer[SGValue] tag)
 
 
 
@@ -1801,7 +2372,7 @@ use @g_value_reset[NullablePointer[GValue]](value': NullablePointer[GValue] tag)
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(int) size=32]
 */
-use @g_value_set_boolean[None](value': NullablePointer[GValue] tag, vboolean': I32)
+use @g_value_set_boolean[None](value': NullablePointer[SGValue] tag, vboolean': I32)
 
 
 
@@ -1815,7 +2386,7 @@ use @g_value_set_boolean[None](value': NullablePointer[GValue] tag, vboolean': I
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_value_set_boxed_take_ownership[None](value': NullablePointer[GValue] tag, vboxed': Pointer[None] tag)
+use @g_value_set_boxed_take_ownership[None](value': NullablePointer[SGValue] tag, vboxed': Pointer[None] tag)
 
 
 
@@ -1829,7 +2400,7 @@ use @g_value_set_boxed_take_ownership[None](value': NullablePointer[GValue] tag,
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_value_set_boxed[None](value': NullablePointer[GValue] tag, vboxed': Pointer[None] tag)
+use @g_value_set_boxed[None](value': NullablePointer[SGValue] tag, vboxed': Pointer[None] tag)
 
 
 
@@ -1843,7 +2414,7 @@ use @g_value_set_boxed[None](value': NullablePointer[GValue] tag, vboxed': Point
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(char) size=8]
 */
-use @g_value_set_char[None](value': NullablePointer[GValue] tag, vchar': U8)
+use @g_value_set_char[None](value': NullablePointer[SGValue] tag, vchar': U8)
 
 
 
@@ -1857,7 +2428,7 @@ use @g_value_set_char[None](value': NullablePointer[GValue] tag, vchar': U8)
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(double) size=64]
 */
-use @g_value_set_double[None](value': NullablePointer[GValue] tag, vdouble': F64)
+use @g_value_set_double[None](value': NullablePointer[SGValue] tag, vdouble': F64)
 
 
 
@@ -1871,7 +2442,7 @@ use @g_value_set_double[None](value': NullablePointer[GValue] tag, vdouble': F64
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(int) size=32]
 */
-use @g_value_set_enum[None](value': NullablePointer[GValue] tag, venum': I32)
+use @g_value_set_enum[None](value': NullablePointer[SGValue] tag, venum': I32)
 
 
 
@@ -1885,7 +2456,7 @@ use @g_value_set_enum[None](value': NullablePointer[GValue] tag, venum': I32)
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_value_set_flags[None](value': NullablePointer[GValue] tag, vflags': U32)
+use @g_value_set_flags[None](value': NullablePointer[SGValue] tag, vflags': U32)
 
 
 
@@ -1899,7 +2470,7 @@ use @g_value_set_flags[None](value': NullablePointer[GValue] tag, vflags': U32)
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(float) size=32]
 */
-use @g_value_set_float[None](value': NullablePointer[GValue] tag, vfloat': F32)
+use @g_value_set_float[None](value': NullablePointer[SGValue] tag, vfloat': F32)
 
 
 
@@ -1913,7 +2484,7 @@ use @g_value_set_float[None](value': NullablePointer[GValue] tag, vfloat': F32)
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(long unsigned int) size=64]
 */
-use @g_value_set_gtype[None](value': NullablePointer[GValue] tag, vgtype': U64)
+use @g_value_set_gtype[None](value': NullablePointer[SGValue] tag, vgtype': U64)
 
 
 
@@ -1927,7 +2498,7 @@ use @g_value_set_gtype[None](value': NullablePointer[GValue] tag, vgtype': U64)
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_value_set_instance[None](value': NullablePointer[GValue] tag, instance': Pointer[None] tag)
+use @g_value_set_instance[None](value': NullablePointer[SGValue] tag, instance': Pointer[None] tag)
 
 
 
@@ -1941,7 +2512,7 @@ use @g_value_set_instance[None](value': NullablePointer[GValue] tag, instance': 
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(long int) size=64]
 */
-use @g_value_set_int64[None](value': NullablePointer[GValue] tag, vint64': I64)
+use @g_value_set_int64[None](value': NullablePointer[SGValue] tag, vint64': I64)
 
 
 
@@ -1955,7 +2526,7 @@ use @g_value_set_int64[None](value': NullablePointer[GValue] tag, vint64': I64)
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_value_set_interned_string[None](value': NullablePointer[GValue] tag, vstring': Pointer[U8] tag)
+use @g_value_set_interned_string[None](value': NullablePointer[SGValue] tag, vstring': Pointer[U8] tag)
 
 
 
@@ -1969,7 +2540,7 @@ use @g_value_set_interned_string[None](value': NullablePointer[GValue] tag, vstr
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(int) size=32]
 */
-use @g_value_set_int[None](value': NullablePointer[GValue] tag, vint': I32)
+use @g_value_set_int[None](value': NullablePointer[SGValue] tag, vint': I32)
 
 
 
@@ -1983,7 +2554,7 @@ use @g_value_set_int[None](value': NullablePointer[GValue] tag, vint': I32)
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(long int) size=64]
 */
-use @g_value_set_long[None](value': NullablePointer[GValue] tag, vlong': I64)
+use @g_value_set_long[None](value': NullablePointer[SGValue] tag, vlong': I64)
 
 
 
@@ -1997,7 +2568,7 @@ use @g_value_set_long[None](value': NullablePointer[GValue] tag, vlong': I64)
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_value_set_object_take_ownership[None](value': NullablePointer[GValue] tag, vobject': Pointer[None] tag)
+use @g_value_set_object_take_ownership[None](value': NullablePointer[SGValue] tag, vobject': Pointer[None] tag)
 
 
 
@@ -2011,7 +2582,7 @@ use @g_value_set_object_take_ownership[None](value': NullablePointer[GValue] tag
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_value_set_object[None](value': NullablePointer[GValue] tag, vobject': Pointer[None] tag)
+use @g_value_set_object[None](value': NullablePointer[SGValue] tag, vobject': Pointer[None] tag)
 
 
 
@@ -2025,7 +2596,7 @@ use @g_value_set_object[None](value': NullablePointer[GValue] tag, vobject': Poi
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[Struct size=576,fid: f135]
 */
-use @g_value_set_param_take_ownership[None](value': NullablePointer[GValue] tag, param': NullablePointer[GParamSpec] tag)
+use @g_value_set_param_take_ownership[None](value': NullablePointer[SGValue] tag, param': NullablePointer[SGParamSpec] tag)
 
 
 
@@ -2039,7 +2610,7 @@ use @g_value_set_param_take_ownership[None](value': NullablePointer[GValue] tag,
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[Struct size=576,fid: f135]
 */
-use @g_value_set_param[None](value': NullablePointer[GValue] tag, param': NullablePointer[GParamSpec] tag)
+use @g_value_set_param[None](value': NullablePointer[SGValue] tag, param': NullablePointer[SGParamSpec] tag)
 
 
 
@@ -2053,7 +2624,7 @@ use @g_value_set_param[None](value': NullablePointer[GValue] tag, param': Nullab
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_value_set_pointer[None](value': NullablePointer[GValue] tag, vpointer': Pointer[None] tag)
+use @g_value_set_pointer[None](value': NullablePointer[SGValue] tag, vpointer': Pointer[None] tag)
 
 
 
@@ -2067,7 +2638,7 @@ use @g_value_set_pointer[None](value': NullablePointer[GValue] tag, vpointer': P
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(signed char) size=8]
 */
-use @g_value_set_schar[None](value': NullablePointer[GValue] tag, vchar': I8)
+use @g_value_set_schar[None](value': NullablePointer[SGValue] tag, vchar': I8)
 
 
 
@@ -2081,7 +2652,7 @@ use @g_value_set_schar[None](value': NullablePointer[GValue] tag, vchar': I8)
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_value_set_static_boxed[None](value': NullablePointer[GValue] tag, vboxed': Pointer[None] tag)
+use @g_value_set_static_boxed[None](value': NullablePointer[SGValue] tag, vboxed': Pointer[None] tag)
 
 
 
@@ -2095,7 +2666,7 @@ use @g_value_set_static_boxed[None](value': NullablePointer[GValue] tag, vboxed'
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_value_set_static_string[None](value': NullablePointer[GValue] tag, vstring': Pointer[U8] tag)
+use @g_value_set_static_string[None](value': NullablePointer[SGValue] tag, vstring': Pointer[U8] tag)
 
 
 
@@ -2109,7 +2680,7 @@ use @g_value_set_static_string[None](value': NullablePointer[GValue] tag, vstrin
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_value_set_string_take_ownership[None](value': NullablePointer[GValue] tag, vstring': Pointer[U8] tag)
+use @g_value_set_string_take_ownership[None](value': NullablePointer[SGValue] tag, vstring': Pointer[U8] tag)
 
 
 
@@ -2123,7 +2694,7 @@ use @g_value_set_string_take_ownership[None](value': NullablePointer[GValue] tag
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_value_set_string[None](value': NullablePointer[GValue] tag, vstring': Pointer[U8] tag)
+use @g_value_set_string[None](value': NullablePointer[SGValue] tag, vstring': Pointer[U8] tag)
 
 
 
@@ -2137,7 +2708,7 @@ use @g_value_set_string[None](value': NullablePointer[GValue] tag, vstring': Poi
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(unsigned char) size=8]
 */
-use @g_value_set_uchar[None](value': NullablePointer[GValue] tag, vuchar': U8)
+use @g_value_set_uchar[None](value': NullablePointer[SGValue] tag, vuchar': U8)
 
 
 
@@ -2151,7 +2722,7 @@ use @g_value_set_uchar[None](value': NullablePointer[GValue] tag, vuchar': U8)
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(long unsigned int) size=64]
 */
-use @g_value_set_uint64[None](value': NullablePointer[GValue] tag, vuint64': U64)
+use @g_value_set_uint64[None](value': NullablePointer[SGValue] tag, vuint64': U64)
 
 
 
@@ -2165,7 +2736,7 @@ use @g_value_set_uint64[None](value': NullablePointer[GValue] tag, vuint64': U64
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(unsigned int) size=32]
 */
-use @g_value_set_uint[None](value': NullablePointer[GValue] tag, vuint': U32)
+use @g_value_set_uint[None](value': NullablePointer[SGValue] tag, vuint': U32)
 
 
 
@@ -2179,7 +2750,7 @@ use @g_value_set_uint[None](value': NullablePointer[GValue] tag, vuint': U32)
     [PointerType size=64]->[Struct size=192,fid: f134]
     [FundamentalType(long unsigned int) size=64]
 */
-use @g_value_set_ulong[None](value': NullablePointer[GValue] tag, vulong': U64)
+use @g_value_set_ulong[None](value': NullablePointer[SGValue] tag, vulong': U64)
 
 
 
@@ -2193,7 +2764,7 @@ use @g_value_set_ulong[None](value': NullablePointer[GValue] tag, vulong': U64)
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_value_set_variant[None](value': NullablePointer[GValue] tag, variant': NullablePointer[GVariant] tag)
+use @g_value_set_variant[None](value': NullablePointer[SGValue] tag, variant': NullablePointer[SGVariant] tag)
 
 
 
@@ -2207,7 +2778,7 @@ use @g_value_set_variant[None](value': NullablePointer[GValue] tag, variant': Nu
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_value_take_boxed[None](value': NullablePointer[GValue] tag, vboxed': Pointer[None] tag)
+use @g_value_take_boxed[None](value': NullablePointer[SGValue] tag, vboxed': Pointer[None] tag)
 
 
 
@@ -2221,7 +2792,7 @@ use @g_value_take_boxed[None](value': NullablePointer[GValue] tag, vboxed': Poin
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_value_take_object[None](value': NullablePointer[GValue] tag, vobject': Pointer[None] tag)
+use @g_value_take_object[None](value': NullablePointer[SGValue] tag, vobject': Pointer[None] tag)
 
 
 
@@ -2235,7 +2806,7 @@ use @g_value_take_object[None](value': NullablePointer[GValue] tag, vobject': Po
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[Struct size=576,fid: f135]
 */
-use @g_value_take_param[None](value': NullablePointer[GValue] tag, param': NullablePointer[GParamSpec] tag)
+use @g_value_take_param[None](value': NullablePointer[SGValue] tag, param': NullablePointer[SGParamSpec] tag)
 
 
 
@@ -2249,7 +2820,7 @@ use @g_value_take_param[None](value': NullablePointer[GValue] tag, param': Nulla
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_value_take_string[None](value': NullablePointer[GValue] tag, vstring': Pointer[U8] tag)
+use @g_value_take_string[None](value': NullablePointer[SGValue] tag, vstring': Pointer[U8] tag)
 
 
 
@@ -2263,7 +2834,7 @@ use @g_value_take_string[None](value': NullablePointer[GValue] tag, vstring': Po
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_value_take_variant[None](value': NullablePointer[GValue] tag, variant': NullablePointer[GVariant] tag)
+use @g_value_take_variant[None](value': NullablePointer[SGValue] tag, variant': NullablePointer[SGVariant] tag)
 
 
 
@@ -2277,7 +2848,7 @@ use @g_value_take_variant[None](value': NullablePointer[GValue] tag, variant': N
     [PointerType size=64]->[Struct size=192,fid: f134]
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_transform[I32](srcvalue': NullablePointer[GValue] tag, destvalue': NullablePointer[GValue] tag)
+use @g_value_transform[I32](srcvalue': NullablePointer[SGValue] tag, destvalue': NullablePointer[SGValue] tag)
 
 
 
@@ -2318,7 +2889,7 @@ use @g_value_type_transformable[I32](srctype': U64, desttype': U64)
   Arguments:
     [PointerType size=64]->[Struct size=192,fid: f134]
 */
-use @g_value_unset[None](value': NullablePointer[GValue] tag)
+use @g_value_unset[None](value': NullablePointer[SGValue] tag)
 
 
 
@@ -2331,7 +2902,7 @@ use @g_value_unset[None](value': NullablePointer[GValue] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_byteswap[NullablePointer[GVariant]](value': NullablePointer[GVariant] tag)
+use @g_variant_byteswap[NullablePointer[SGVariant]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2346,7 +2917,7 @@ use @g_variant_byteswap[NullablePointer[GVariant]](value': NullablePointer[GVari
     [PointerType size=64]->[FundamentalType(char) size=8]
     [FundamentalType(int) size=32]
 */
-use @g_variant_check_format_string[I32](value': NullablePointer[GVariant] tag, formatstring': Pointer[U8] tag, copyonly': I32)
+use @g_variant_check_format_string[I32](value': NullablePointer[SGVariant] tag, formatstring': Pointer[U8] tag, copyonly': I32)
 
 
 
@@ -2359,7 +2930,7 @@ use @g_variant_check_format_string[I32](value': NullablePointer[GVariant] tag, f
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_classify[I32](value': NullablePointer[GVariant] tag)
+use @g_variant_classify[I32](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2387,7 +2958,7 @@ use @g_variant_compare[I32](one': Pointer[None] tag, two': Pointer[None] tag)
     [PointerType size=64]->[Struct size=,fid: f93]
     [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_dup_bytestring_array[Pointer[Pointer[U8]]](value': NullablePointer[GVariant] tag, length': Pointer[U64] tag)
+use @g_variant_dup_bytestring_array[Pointer[Pointer[U8]]](value': NullablePointer[SGVariant] tag, length': Pointer[U64] tag)
 
 
 
@@ -2401,7 +2972,7 @@ use @g_variant_dup_bytestring_array[Pointer[Pointer[U8]]](value': NullablePointe
     [PointerType size=64]->[Struct size=,fid: f93]
     [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_dup_bytestring[Pointer[U8]](value': NullablePointer[GVariant] tag, length': Pointer[U64] tag)
+use @g_variant_dup_bytestring[Pointer[U8]](value': NullablePointer[SGVariant] tag, length': Pointer[U64] tag)
 
 
 
@@ -2415,7 +2986,7 @@ use @g_variant_dup_bytestring[Pointer[U8]](value': NullablePointer[GVariant] tag
     [PointerType size=64]->[Struct size=,fid: f93]
     [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_dup_objv[Pointer[Pointer[U8]]](value': NullablePointer[GVariant] tag, length': Pointer[U64] tag)
+use @g_variant_dup_objv[Pointer[Pointer[U8]]](value': NullablePointer[SGVariant] tag, length': Pointer[U64] tag)
 
 
 
@@ -2429,7 +3000,7 @@ use @g_variant_dup_objv[Pointer[Pointer[U8]]](value': NullablePointer[GVariant] 
     [PointerType size=64]->[Struct size=,fid: f93]
     [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_dup_string[Pointer[U8]](value': NullablePointer[GVariant] tag, length': Pointer[U64] tag)
+use @g_variant_dup_string[Pointer[U8]](value': NullablePointer[SGVariant] tag, length': Pointer[U64] tag)
 
 
 
@@ -2443,7 +3014,7 @@ use @g_variant_dup_string[Pointer[U8]](value': NullablePointer[GVariant] tag, le
     [PointerType size=64]->[Struct size=,fid: f93]
     [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_dup_strv[Pointer[Pointer[U8]]](value': NullablePointer[GVariant] tag, length': Pointer[U64] tag)
+use @g_variant_dup_strv[Pointer[Pointer[U8]]](value': NullablePointer[SGVariant] tag, length': Pointer[U64] tag)
 
 
 
@@ -2470,7 +3041,7 @@ use @g_variant_equal[I32](one': Pointer[None] tag, two': Pointer[None] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_boolean[I32](value': NullablePointer[GVariant] tag)
+use @g_variant_get_boolean[I32](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2484,7 +3055,7 @@ use @g_variant_get_boolean[I32](value': NullablePointer[GVariant] tag)
     [PointerType size=64]->[Struct size=,fid: f93]
     [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_get_bytestring_array[Pointer[Pointer[U8]]](value': NullablePointer[GVariant] tag, length': Pointer[U64] tag)
+use @g_variant_get_bytestring_array[Pointer[Pointer[U8]]](value': NullablePointer[SGVariant] tag, length': Pointer[U64] tag)
 
 
 
@@ -2497,7 +3068,7 @@ use @g_variant_get_bytestring_array[Pointer[Pointer[U8]]](value': NullablePointe
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_bytestring[Pointer[U8]](value': NullablePointer[GVariant] tag)
+use @g_variant_get_bytestring[Pointer[U8]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2510,7 +3081,7 @@ use @g_variant_get_bytestring[Pointer[U8]](value': NullablePointer[GVariant] tag
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_byte[U8](value': NullablePointer[GVariant] tag)
+use @g_variant_get_byte[U8](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2525,7 +3096,7 @@ use @g_variant_get_byte[U8](value': NullablePointer[GVariant] tag)
     [FundamentalType(long unsigned int) size=64]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_get_child[None](value': NullablePointer[GVariant] tag, index': U64, formatstring': Pointer[U8] tag, ...)
+use @g_variant_get_child[None](value': NullablePointer[SGVariant] tag, index': U64, formatstring': Pointer[U8] tag, ...)
 
 
 
@@ -2539,7 +3110,7 @@ use @g_variant_get_child[None](value': NullablePointer[GVariant] tag, index': U6
     [PointerType size=64]->[Struct size=,fid: f93]
     [FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_get_child_value[NullablePointer[GVariant]](value': NullablePointer[GVariant] tag, index': U64)
+use @g_variant_get_child_value[NullablePointer[SGVariant]](value': NullablePointer[SGVariant] tag, index': U64)
 
 
 
@@ -2552,7 +3123,7 @@ use @g_variant_get_child_value[NullablePointer[GVariant]](value': NullablePointe
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_data_as_bytes[NullablePointer[GBytes]](value': NullablePointer[GVariant] tag)
+use @g_variant_get_data_as_bytes[NullablePointer[SGBytes]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2565,7 +3136,7 @@ use @g_variant_get_data_as_bytes[NullablePointer[GBytes]](value': NullablePointe
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_data[Pointer[None]](value': NullablePointer[GVariant] tag)
+use @g_variant_get_data[Pointer[None]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2578,7 +3149,7 @@ use @g_variant_get_data[Pointer[None]](value': NullablePointer[GVariant] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_double[F64](value': NullablePointer[GVariant] tag)
+use @g_variant_get_double[F64](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2593,7 +3164,7 @@ use @g_variant_get_double[F64](value': NullablePointer[GVariant] tag)
     [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
     [FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_get_fixed_array[Pointer[None]](value': NullablePointer[GVariant] tag, nelements': Pointer[U64] tag, elementsize': U64)
+use @g_variant_get_fixed_array[Pointer[None]](value': NullablePointer[SGVariant] tag, nelements': Pointer[U64] tag, elementsize': U64)
 
 
 
@@ -2618,7 +3189,7 @@ use @g_variant_get_gtype[U64]()
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_handle[I32](value': NullablePointer[GVariant] tag)
+use @g_variant_get_handle[I32](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2631,7 +3202,7 @@ use @g_variant_get_handle[I32](value': NullablePointer[GVariant] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_int16[I16](value': NullablePointer[GVariant] tag)
+use @g_variant_get_int16[I16](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2644,7 +3215,7 @@ use @g_variant_get_int16[I16](value': NullablePointer[GVariant] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_int32[I32](value': NullablePointer[GVariant] tag)
+use @g_variant_get_int32[I32](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2657,7 +3228,7 @@ use @g_variant_get_int32[I32](value': NullablePointer[GVariant] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_int64[I64](value': NullablePointer[GVariant] tag)
+use @g_variant_get_int64[I64](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2670,7 +3241,7 @@ use @g_variant_get_int64[I64](value': NullablePointer[GVariant] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_maybe[NullablePointer[GVariant]](value': NullablePointer[GVariant] tag)
+use @g_variant_get_maybe[NullablePointer[SGVariant]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2683,7 +3254,7 @@ use @g_variant_get_maybe[NullablePointer[GVariant]](value': NullablePointer[GVar
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_normal_form[NullablePointer[GVariant]](value': NullablePointer[GVariant] tag)
+use @g_variant_get_normal_form[NullablePointer[SGVariant]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2697,7 +3268,7 @@ use @g_variant_get_normal_form[NullablePointer[GVariant]](value': NullablePointe
     [PointerType size=64]->[Struct size=,fid: f93]
     [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_get_objv[Pointer[Pointer[U8]]](value': NullablePointer[GVariant] tag, length': Pointer[U64] tag)
+use @g_variant_get_objv[Pointer[Pointer[U8]]](value': NullablePointer[SGVariant] tag, length': Pointer[U64] tag)
 
 
 
@@ -2710,7 +3281,7 @@ use @g_variant_get_objv[Pointer[Pointer[U8]]](value': NullablePointer[GVariant] 
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_size[U64](value': NullablePointer[GVariant] tag)
+use @g_variant_get_size[U64](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2724,7 +3295,7 @@ use @g_variant_get_size[U64](value': NullablePointer[GVariant] tag)
     [PointerType size=64]->[Struct size=,fid: f93]
     [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_get_string[Pointer[U8]](value': NullablePointer[GVariant] tag, length': Pointer[U64] tag)
+use @g_variant_get_string[Pointer[U8]](value': NullablePointer[SGVariant] tag, length': Pointer[U64] tag)
 
 
 
@@ -2738,7 +3309,7 @@ use @g_variant_get_string[Pointer[U8]](value': NullablePointer[GVariant] tag, le
     [PointerType size=64]->[Struct size=,fid: f93]
     [PointerType size=64]->[FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_get_strv[Pointer[Pointer[U8]]](value': NullablePointer[GVariant] tag, length': Pointer[U64] tag)
+use @g_variant_get_strv[Pointer[Pointer[U8]]](value': NullablePointer[SGVariant] tag, length': Pointer[U64] tag)
 
 
 
@@ -2751,7 +3322,7 @@ use @g_variant_get_strv[Pointer[Pointer[U8]]](value': NullablePointer[GVariant] 
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_type_string[Pointer[U8]](value': NullablePointer[GVariant] tag)
+use @g_variant_get_type_string[Pointer[U8]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2764,7 +3335,7 @@ use @g_variant_get_type_string[Pointer[U8]](value': NullablePointer[GVariant] ta
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_type[NullablePointer[GVariantType]](value': NullablePointer[GVariant] tag)
+use @g_variant_get_type[NullablePointer[SGVariantType]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2777,7 +3348,7 @@ use @g_variant_get_type[NullablePointer[GVariantType]](value': NullablePointer[G
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_uint16[U16](value': NullablePointer[GVariant] tag)
+use @g_variant_get_uint16[U16](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2790,7 +3361,7 @@ use @g_variant_get_uint16[U16](value': NullablePointer[GVariant] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_uint32[U32](value': NullablePointer[GVariant] tag)
+use @g_variant_get_uint32[U32](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2803,7 +3374,7 @@ use @g_variant_get_uint32[U32](value': NullablePointer[GVariant] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_uint64[U64](value': NullablePointer[GVariant] tag)
+use @g_variant_get_uint64[U64](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2817,7 +3388,7 @@ use @g_variant_get_uint64[U64](value': NullablePointer[GVariant] tag)
     [PointerType size=64]->[Struct size=,fid: f93]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_get[None](value': NullablePointer[GVariant] tag, formatstring': Pointer[U8] tag, ...)
+use @g_variant_get[None](value': NullablePointer[SGVariant] tag, formatstring': Pointer[U8] tag, ...)
 
 
 
@@ -2830,7 +3401,7 @@ use @g_variant_get[None](value': NullablePointer[GVariant] tag, formatstring': P
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_get_variant[NullablePointer[GVariant]](value': NullablePointer[GVariant] tag)
+use @g_variant_get_variant[NullablePointer[SGVariant]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2856,7 +3427,7 @@ use @g_variant_hash[U32](value': Pointer[None] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_is_container[I32](value': NullablePointer[GVariant] tag)
+use @g_variant_is_container[I32](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2869,7 +3440,7 @@ use @g_variant_is_container[I32](value': NullablePointer[GVariant] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_is_floating[I32](value': NullablePointer[GVariant] tag)
+use @g_variant_is_floating[I32](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2882,7 +3453,7 @@ use @g_variant_is_floating[I32](value': NullablePointer[GVariant] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_is_normal_form[I32](value': NullablePointer[GVariant] tag)
+use @g_variant_is_normal_form[I32](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2909,7 +3480,7 @@ use @g_variant_is_object_path[I32](string': Pointer[U8] tag)
     [PointerType size=64]->[Struct size=,fid: f93]
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_is_of_type[I32](value': NullablePointer[GVariant] tag, type': NullablePointer[GVariantType] tag)
+use @g_variant_is_of_type[I32](value': NullablePointer[SGVariant] tag, type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -2935,7 +3506,7 @@ use @g_variant_is_signature[I32](string': Pointer[U8] tag)
   Arguments:
     [PointerType size=64]->[Struct size=1024,fid: f93]
 */
-use @g_variant_iter_copy[NullablePointer[GVariantIter]](iter': NullablePointer[GVariantIter] tag)
+use @g_variant_iter_copy[NullablePointer[SGVariantIter]](iter': NullablePointer[SGVariantIter] tag)
 
 
 
@@ -2948,7 +3519,7 @@ use @g_variant_iter_copy[NullablePointer[GVariantIter]](iter': NullablePointer[G
   Arguments:
     [PointerType size=64]->[Struct size=1024,fid: f93]
 */
-use @g_variant_iter_free[None](iter': NullablePointer[GVariantIter] tag)
+use @g_variant_iter_free[None](iter': NullablePointer[SGVariantIter] tag)
 
 
 
@@ -2962,7 +3533,7 @@ use @g_variant_iter_free[None](iter': NullablePointer[GVariantIter] tag)
     [PointerType size=64]->[Struct size=1024,fid: f93]
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_iter_init[U64](iter': NullablePointer[GVariantIter] tag, value': NullablePointer[GVariant] tag)
+use @g_variant_iter_init[U64](iter': NullablePointer[SGVariantIter] tag, value': NullablePointer[SGVariant] tag)
 
 
 
@@ -2976,7 +3547,7 @@ use @g_variant_iter_init[U64](iter': NullablePointer[GVariantIter] tag, value': 
     [PointerType size=64]->[Struct size=1024,fid: f93]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_iter_loop[I32](iter': NullablePointer[GVariantIter] tag, formatstring': Pointer[U8] tag, ...)
+use @g_variant_iter_loop[I32](iter': NullablePointer[SGVariantIter] tag, formatstring': Pointer[U8] tag, ...)
 
 
 
@@ -2989,7 +3560,7 @@ use @g_variant_iter_loop[I32](iter': NullablePointer[GVariantIter] tag, formatst
   Arguments:
     [PointerType size=64]->[Struct size=1024,fid: f93]
 */
-use @g_variant_iter_n_children[U64](iter': NullablePointer[GVariantIter] tag)
+use @g_variant_iter_n_children[U64](iter': NullablePointer[SGVariantIter] tag)
 
 
 
@@ -3002,7 +3573,7 @@ use @g_variant_iter_n_children[U64](iter': NullablePointer[GVariantIter] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_iter_new[NullablePointer[GVariantIter]](value': NullablePointer[GVariant] tag)
+use @g_variant_iter_new[NullablePointer[SGVariantIter]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -3016,7 +3587,7 @@ use @g_variant_iter_new[NullablePointer[GVariantIter]](value': NullablePointer[G
     [PointerType size=64]->[Struct size=1024,fid: f93]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_iter_next[I32](iter': NullablePointer[GVariantIter] tag, formatstring': Pointer[U8] tag, ...)
+use @g_variant_iter_next[I32](iter': NullablePointer[SGVariantIter] tag, formatstring': Pointer[U8] tag, ...)
 
 
 
@@ -3029,7 +3600,7 @@ use @g_variant_iter_next[I32](iter': NullablePointer[GVariantIter] tag, formatst
   Arguments:
     [PointerType size=64]->[Struct size=1024,fid: f93]
 */
-use @g_variant_iter_next_value[NullablePointer[GVariant]](iter': NullablePointer[GVariantIter] tag)
+use @g_variant_iter_next_value[NullablePointer[SGVariant]](iter': NullablePointer[SGVariantIter] tag)
 
 
 
@@ -3044,7 +3615,7 @@ use @g_variant_iter_next_value[NullablePointer[GVariant]](iter': NullablePointer
     [PointerType size=64]->[FundamentalType(char) size=8]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_lookup[I32](dictionary': NullablePointer[GVariant] tag, key': Pointer[U8] tag, formatstring': Pointer[U8] tag, ...)
+use @g_variant_lookup[I32](dictionary': NullablePointer[SGVariant] tag, key': Pointer[U8] tag, formatstring': Pointer[U8] tag, ...)
 
 
 
@@ -3059,7 +3630,7 @@ use @g_variant_lookup[I32](dictionary': NullablePointer[GVariant] tag, key': Poi
     [PointerType size=64]->[FundamentalType(char) size=8]
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_lookup_value[NullablePointer[GVariant]](dictionary': NullablePointer[GVariant] tag, key': Pointer[U8] tag, expectedtype': NullablePointer[GVariantType] tag)
+use @g_variant_lookup_value[NullablePointer[SGVariant]](dictionary': NullablePointer[SGVariant] tag, key': Pointer[U8] tag, expectedtype': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3072,7 +3643,7 @@ use @g_variant_lookup_value[NullablePointer[GVariant]](dictionary': NullablePoin
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_n_children[U64](value': NullablePointer[GVariant] tag)
+use @g_variant_n_children[U64](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -3087,7 +3658,7 @@ use @g_variant_n_children[U64](value': NullablePointer[GVariant] tag)
     [PointerType size=64]->[PointerType size=64]->[Struct size=,fid: f93]
     [FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_new_array[NullablePointer[GVariant]](childtype': NullablePointer[GVariantType] tag, children': Pointer[NullablePointer[GVariant]] tag, nchildren': U64)
+use @g_variant_new_array[NullablePointer[SGVariant]](childtype': NullablePointer[SGVariantType] tag, children': Pointer[NullablePointer[SGVariant]] tag, nchildren': U64)
 
 
 
@@ -3100,7 +3671,7 @@ use @g_variant_new_array[NullablePointer[GVariant]](childtype': NullablePointer[
   Arguments:
     [FundamentalType(int) size=32]
 */
-use @g_variant_new_boolean[NullablePointer[GVariant]](value': I32)
+use @g_variant_new_boolean[NullablePointer[SGVariant]](value': I32)
 
 
 
@@ -3113,7 +3684,7 @@ use @g_variant_new_boolean[NullablePointer[GVariant]](value': I32)
   Arguments:
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_new_bytestring[NullablePointer[GVariant]](string': Pointer[U8] tag)
+use @g_variant_new_bytestring[NullablePointer[SGVariant]](string': Pointer[U8] tag)
 
 
 
@@ -3126,7 +3697,7 @@ use @g_variant_new_bytestring[NullablePointer[GVariant]](string': Pointer[U8] ta
   Arguments:
     [FundamentalType(unsigned char) size=8]
 */
-use @g_variant_new_byte[NullablePointer[GVariant]](value': U8)
+use @g_variant_new_byte[NullablePointer[SGVariant]](value': U8)
 
 
 
@@ -3140,7 +3711,7 @@ use @g_variant_new_byte[NullablePointer[GVariant]](value': U8)
     [PointerType size=64]->[Struct size=,fid: f93]
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_new_dict_entry[NullablePointer[GVariant]](key': NullablePointer[GVariant] tag, value': NullablePointer[GVariant] tag)
+use @g_variant_new_dict_entry[NullablePointer[SGVariant]](key': NullablePointer[SGVariant] tag, value': NullablePointer[SGVariant] tag)
 
 
 
@@ -3153,7 +3724,7 @@ use @g_variant_new_dict_entry[NullablePointer[GVariant]](key': NullablePointer[G
   Arguments:
     [FundamentalType(double) size=64]
 */
-use @g_variant_new_double[NullablePointer[GVariant]](value': F64)
+use @g_variant_new_double[NullablePointer[SGVariant]](value': F64)
 
 
 
@@ -3169,7 +3740,7 @@ use @g_variant_new_double[NullablePointer[GVariant]](value': F64)
     [FundamentalType(long unsigned int) size=64]
     [FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_new_fixed_array[NullablePointer[GVariant]](elementtype': NullablePointer[GVariantType] tag, elements': Pointer[None] tag, nelements': U64, elementsize': U64)
+use @g_variant_new_fixed_array[NullablePointer[SGVariant]](elementtype': NullablePointer[SGVariantType] tag, elements': Pointer[None] tag, nelements': U64, elementsize': U64)
 
 
 
@@ -3184,7 +3755,7 @@ use @g_variant_new_fixed_array[NullablePointer[GVariant]](elementtype': Nullable
     [PointerType size=64]->[Struct size=,fid: f19]
     [FundamentalType(int) size=32]
 */
-use @g_variant_new_from_bytes[NullablePointer[GVariant]](type': NullablePointer[GVariantType] tag, bytes': NullablePointer[GBytes] tag, trusted': I32)
+use @g_variant_new_from_bytes[NullablePointer[SGVariant]](type': NullablePointer[SGVariantType] tag, bytes': NullablePointer[SGBytes] tag, trusted': I32)
 
 
 
@@ -3202,7 +3773,7 @@ use @g_variant_new_from_bytes[NullablePointer[GVariant]](type': NullablePointer[
     [PointerType size=64]->[FunctionType]  WRITE MANUALLY
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_variant_new_from_data[NullablePointer[GVariant]](type': NullablePointer[GVariantType] tag, data': Pointer[None] tag, size': U64, trusted': I32, notify': Pointer[None] tag, userdata': Pointer[None] tag)
+use @g_variant_new_from_data[NullablePointer[SGVariant]](type': NullablePointer[SGVariantType] tag, data': Pointer[None] tag, size': U64, trusted': I32, notify': Pointer[None] tag, userdata': Pointer[None] tag)
 
 
 
@@ -3215,7 +3786,7 @@ use @g_variant_new_from_data[NullablePointer[GVariant]](type': NullablePointer[G
   Arguments:
     [FundamentalType(int) size=32]
 */
-use @g_variant_new_handle[NullablePointer[GVariant]](value': I32)
+use @g_variant_new_handle[NullablePointer[SGVariant]](value': I32)
 
 
 
@@ -3228,7 +3799,7 @@ use @g_variant_new_handle[NullablePointer[GVariant]](value': I32)
   Arguments:
     [FundamentalType(short int) size=16]
 */
-use @g_variant_new_int16[NullablePointer[GVariant]](value': I16)
+use @g_variant_new_int16[NullablePointer[SGVariant]](value': I16)
 
 
 
@@ -3241,7 +3812,7 @@ use @g_variant_new_int16[NullablePointer[GVariant]](value': I16)
   Arguments:
     [FundamentalType(int) size=32]
 */
-use @g_variant_new_int32[NullablePointer[GVariant]](value': I32)
+use @g_variant_new_int32[NullablePointer[SGVariant]](value': I32)
 
 
 
@@ -3254,7 +3825,7 @@ use @g_variant_new_int32[NullablePointer[GVariant]](value': I32)
   Arguments:
     [FundamentalType(long int) size=64]
 */
-use @g_variant_new_int64[NullablePointer[GVariant]](value': I64)
+use @g_variant_new_int64[NullablePointer[SGVariant]](value': I64)
 
 
 
@@ -3268,7 +3839,7 @@ use @g_variant_new_int64[NullablePointer[GVariant]](value': I64)
     [PointerType size=64]->[Struct size=,fid: f92]
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_new_maybe[NullablePointer[GVariant]](childtype': NullablePointer[GVariantType] tag, child': NullablePointer[GVariant] tag)
+use @g_variant_new_maybe[NullablePointer[SGVariant]](childtype': NullablePointer[SGVariantType] tag, child': NullablePointer[SGVariant] tag)
 
 
 
@@ -3281,7 +3852,7 @@ use @g_variant_new_maybe[NullablePointer[GVariant]](childtype': NullablePointer[
   Arguments:
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_new_object_path[NullablePointer[GVariant]](objectpath': Pointer[U8] tag)
+use @g_variant_new_object_path[NullablePointer[SGVariant]](objectpath': Pointer[U8] tag)
 
 
 
@@ -3294,7 +3865,7 @@ use @g_variant_new_object_path[NullablePointer[GVariant]](objectpath': Pointer[U
   Arguments:
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_new_parsed[NullablePointer[GVariant]](format': Pointer[U8] tag, ...)
+use @g_variant_new_parsed[NullablePointer[SGVariant]](format': Pointer[U8] tag, ...)
 
 
 
@@ -3307,7 +3878,7 @@ use @g_variant_new_parsed[NullablePointer[GVariant]](format': Pointer[U8] tag, .
   Arguments:
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_new_printf[NullablePointer[GVariant]](formatstring': Pointer[U8] tag, ...)
+use @g_variant_new_printf[NullablePointer[SGVariant]](formatstring': Pointer[U8] tag, ...)
 
 
 
@@ -3320,7 +3891,7 @@ use @g_variant_new_printf[NullablePointer[GVariant]](formatstring': Pointer[U8] 
   Arguments:
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_new_signature[NullablePointer[GVariant]](signature': Pointer[U8] tag)
+use @g_variant_new_signature[NullablePointer[SGVariant]](signature': Pointer[U8] tag)
 
 
 
@@ -3333,7 +3904,7 @@ use @g_variant_new_signature[NullablePointer[GVariant]](signature': Pointer[U8] 
   Arguments:
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_new_string[NullablePointer[GVariant]](string': Pointer[U8] tag)
+use @g_variant_new_string[NullablePointer[SGVariant]](string': Pointer[U8] tag)
 
 
 
@@ -3346,7 +3917,7 @@ use @g_variant_new_string[NullablePointer[GVariant]](string': Pointer[U8] tag)
   Arguments:
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_new_take_string[NullablePointer[GVariant]](string': Pointer[U8] tag)
+use @g_variant_new_take_string[NullablePointer[SGVariant]](string': Pointer[U8] tag)
 
 
 
@@ -3360,7 +3931,7 @@ use @g_variant_new_take_string[NullablePointer[GVariant]](string': Pointer[U8] t
     [PointerType size=64]->[PointerType size=64]->[Struct size=,fid: f93]
     [FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_new_tuple[NullablePointer[GVariant]](children': Pointer[NullablePointer[GVariant]] tag, nchildren': U64)
+use @g_variant_new_tuple[NullablePointer[SGVariant]](children': Pointer[NullablePointer[SGVariant]] tag, nchildren': U64)
 
 
 
@@ -3373,7 +3944,7 @@ use @g_variant_new_tuple[NullablePointer[GVariant]](children': Pointer[NullableP
   Arguments:
     [FundamentalType(short unsigned int) size=16]
 */
-use @g_variant_new_uint16[NullablePointer[GVariant]](value': U16)
+use @g_variant_new_uint16[NullablePointer[SGVariant]](value': U16)
 
 
 
@@ -3386,7 +3957,7 @@ use @g_variant_new_uint16[NullablePointer[GVariant]](value': U16)
   Arguments:
     [FundamentalType(unsigned int) size=32]
 */
-use @g_variant_new_uint32[NullablePointer[GVariant]](value': U32)
+use @g_variant_new_uint32[NullablePointer[SGVariant]](value': U32)
 
 
 
@@ -3399,7 +3970,7 @@ use @g_variant_new_uint32[NullablePointer[GVariant]](value': U32)
   Arguments:
     [FundamentalType(long unsigned int) size=64]
 */
-use @g_variant_new_uint64[NullablePointer[GVariant]](value': U64)
+use @g_variant_new_uint64[NullablePointer[SGVariant]](value': U64)
 
 
 
@@ -3412,7 +3983,7 @@ use @g_variant_new_uint64[NullablePointer[GVariant]](value': U64)
   Arguments:
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_new[NullablePointer[GVariant]](formatstring': Pointer[U8] tag, ...)
+use @g_variant_new[NullablePointer[SGVariant]](formatstring': Pointer[U8] tag, ...)
 
 
 
@@ -3425,7 +3996,7 @@ use @g_variant_new[NullablePointer[GVariant]](formatstring': Pointer[U8] tag, ..
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_new_variant[NullablePointer[GVariant]](value': NullablePointer[GVariant] tag)
+use @g_variant_new_variant[NullablePointer[SGVariant]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -3439,7 +4010,7 @@ use @g_variant_new_variant[NullablePointer[GVariant]](value': NullablePointer[GV
     [PointerType size=64]->[Struct size=128,fid: f23]
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_parse_error_print_context[Pointer[U8]](error': NullablePointer[GError] tag, sourcestr': Pointer[U8] tag)
+use @g_variant_parse_error_print_context[Pointer[U8]](error': NullablePointer[SGError] tag, sourcestr': Pointer[U8] tag)
 
 
 
@@ -3478,7 +4049,7 @@ use @g_variant_parser_get_error_quark[U32]()
     [PointerType size=64]->[Struct size=192,fid: f87]
     [FundamentalType(int) size=32]
 */
-use @g_variant_print_string[NullablePointer[GString]](value': NullablePointer[GVariant] tag, string': NullablePointer[GString] tag, typeannotate': I32)
+use @g_variant_print_string[NullablePointer[SGString]](value': NullablePointer[SGVariant] tag, string': NullablePointer[SGString] tag, typeannotate': I32)
 
 
 
@@ -3492,7 +4063,7 @@ use @g_variant_print_string[NullablePointer[GString]](value': NullablePointer[GV
     [PointerType size=64]->[Struct size=,fid: f93]
     [FundamentalType(int) size=32]
 */
-use @g_variant_print[Pointer[U8]](value': NullablePointer[GVariant] tag, typeannotate': I32)
+use @g_variant_print[Pointer[U8]](value': NullablePointer[SGVariant] tag, typeannotate': I32)
 
 
 
@@ -3505,7 +4076,7 @@ use @g_variant_print[Pointer[U8]](value': NullablePointer[GVariant] tag, typeann
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_ref_sink[NullablePointer[GVariant]](value': NullablePointer[GVariant] tag)
+use @g_variant_ref_sink[NullablePointer[SGVariant]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -3518,7 +4089,7 @@ use @g_variant_ref_sink[NullablePointer[GVariant]](value': NullablePointer[GVari
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_ref[NullablePointer[GVariant]](value': NullablePointer[GVariant] tag)
+use @g_variant_ref[NullablePointer[SGVariant]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -3532,7 +4103,7 @@ use @g_variant_ref[NullablePointer[GVariant]](value': NullablePointer[GVariant] 
     [PointerType size=64]->[Struct size=,fid: f93]
     [PointerType size=64]->[FundamentalType(void) size=0]
 */
-use @g_variant_store[None](value': NullablePointer[GVariant] tag, data': Pointer[None] tag)
+use @g_variant_store[None](value': NullablePointer[SGVariant] tag, data': Pointer[None] tag)
 
 
 
@@ -3545,7 +4116,7 @@ use @g_variant_store[None](value': NullablePointer[GVariant] tag, data': Pointer
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_take_ref[NullablePointer[GVariant]](value': NullablePointer[GVariant] tag)
+use @g_variant_take_ref[NullablePointer[SGVariant]](value': NullablePointer[SGVariant] tag)
 
 
 
@@ -3558,7 +4129,7 @@ use @g_variant_take_ref[NullablePointer[GVariant]](value': NullablePointer[GVari
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_copy[NullablePointer[GVariantType]](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_copy[NullablePointer[SGVariantType]](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3571,7 +4142,7 @@ use @g_variant_type_copy[NullablePointer[GVariantType]](type': NullablePointer[G
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_dup_string[Pointer[U8]](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_dup_string[Pointer[U8]](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3584,7 +4155,7 @@ use @g_variant_type_dup_string[Pointer[U8]](type': NullablePointer[GVariantType]
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_element[NullablePointer[GVariantType]](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_element[NullablePointer[SGVariantType]](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3611,7 +4182,7 @@ use @g_variant_type_equal[I32](type1': Pointer[None] tag, type2': Pointer[None] 
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_first[NullablePointer[GVariantType]](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_first[NullablePointer[SGVariantType]](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3624,7 +4195,7 @@ use @g_variant_type_first[NullablePointer[GVariantType]](type': NullablePointer[
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_free[None](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_free[None](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3649,7 +4220,7 @@ use @g_variant_type_get_gtype[U64]()
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_get_string_length[U64](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_get_string_length[U64](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3675,7 +4246,7 @@ use @g_variant_type_hash[U32](type': Pointer[None] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_is_array[I32](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_is_array[I32](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3688,7 +4259,7 @@ use @g_variant_type_is_array[I32](type': NullablePointer[GVariantType] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_is_basic[I32](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_is_basic[I32](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3701,7 +4272,7 @@ use @g_variant_type_is_basic[I32](type': NullablePointer[GVariantType] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_is_container[I32](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_is_container[I32](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3714,7 +4285,7 @@ use @g_variant_type_is_container[I32](type': NullablePointer[GVariantType] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_is_definite[I32](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_is_definite[I32](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3727,7 +4298,7 @@ use @g_variant_type_is_definite[I32](type': NullablePointer[GVariantType] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_is_dict_entry[I32](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_is_dict_entry[I32](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3740,7 +4311,7 @@ use @g_variant_type_is_dict_entry[I32](type': NullablePointer[GVariantType] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_is_maybe[I32](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_is_maybe[I32](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3754,7 +4325,7 @@ use @g_variant_type_is_maybe[I32](type': NullablePointer[GVariantType] tag)
     [PointerType size=64]->[Struct size=,fid: f92]
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_is_subtype_of[I32](type': NullablePointer[GVariantType] tag, supertype': NullablePointer[GVariantType] tag)
+use @g_variant_type_is_subtype_of[I32](type': NullablePointer[SGVariantType] tag, supertype': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3767,7 +4338,7 @@ use @g_variant_type_is_subtype_of[I32](type': NullablePointer[GVariantType] tag,
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_is_tuple[I32](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_is_tuple[I32](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3780,7 +4351,7 @@ use @g_variant_type_is_tuple[I32](type': NullablePointer[GVariantType] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_is_variant[I32](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_is_variant[I32](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3793,7 +4364,7 @@ use @g_variant_type_is_variant[I32](type': NullablePointer[GVariantType] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_key[NullablePointer[GVariantType]](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_key[NullablePointer[SGVariantType]](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3806,7 +4377,7 @@ use @g_variant_type_key[NullablePointer[GVariantType]](type': NullablePointer[GV
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_new_array[NullablePointer[GVariantType]](element': NullablePointer[GVariantType] tag)
+use @g_variant_type_new_array[NullablePointer[SGVariantType]](element': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3820,7 +4391,7 @@ use @g_variant_type_new_array[NullablePointer[GVariantType]](element': NullableP
     [PointerType size=64]->[Struct size=,fid: f92]
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_new_dict_entry[NullablePointer[GVariantType]](key': NullablePointer[GVariantType] tag, value': NullablePointer[GVariantType] tag)
+use @g_variant_type_new_dict_entry[NullablePointer[SGVariantType]](key': NullablePointer[SGVariantType] tag, value': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3833,7 +4404,7 @@ use @g_variant_type_new_dict_entry[NullablePointer[GVariantType]](key': Nullable
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_new_maybe[NullablePointer[GVariantType]](element': NullablePointer[GVariantType] tag)
+use @g_variant_type_new_maybe[NullablePointer[SGVariantType]](element': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3847,7 +4418,7 @@ use @g_variant_type_new_maybe[NullablePointer[GVariantType]](element': NullableP
     [PointerType size=64]->[PointerType size=64]->[Struct size=,fid: f92]
     [FundamentalType(int) size=32]
 */
-use @g_variant_type_new_tuple[NullablePointer[GVariantType]](items': Pointer[NullablePointer[GVariantType]] tag, length': I32)
+use @g_variant_type_new_tuple[NullablePointer[SGVariantType]](items': Pointer[NullablePointer[SGVariantType]] tag, length': I32)
 
 
 
@@ -3860,7 +4431,7 @@ use @g_variant_type_new_tuple[NullablePointer[GVariantType]](items': Pointer[Nul
   Arguments:
     [PointerType size=64]->[FundamentalType(char) size=8]
 */
-use @g_variant_type_new[NullablePointer[GVariantType]](typestring': Pointer[U8] tag)
+use @g_variant_type_new[NullablePointer[SGVariantType]](typestring': Pointer[U8] tag)
 
 
 
@@ -3873,7 +4444,7 @@ use @g_variant_type_new[NullablePointer[GVariantType]](typestring': Pointer[U8] 
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_next[NullablePointer[GVariantType]](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_next[NullablePointer[SGVariantType]](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3886,7 +4457,7 @@ use @g_variant_type_next[NullablePointer[GVariantType]](type': NullablePointer[G
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_n_items[U64](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_n_items[U64](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3899,7 +4470,7 @@ use @g_variant_type_n_items[U64](type': NullablePointer[GVariantType] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_peek_string[Pointer[U8]](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_peek_string[Pointer[U8]](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3925,7 +4496,7 @@ use @g_variant_type_string_is_valid[I32](typestring': Pointer[U8] tag)
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f92]
 */
-use @g_variant_type_value[NullablePointer[GVariantType]](type': NullablePointer[GVariantType] tag)
+use @g_variant_type_value[NullablePointer[SGVariantType]](type': NullablePointer[SGVariantType] tag)
 
 
 
@@ -3938,5 +4509,5 @@ use @g_variant_type_value[NullablePointer[GVariantType]](type': NullablePointer[
   Arguments:
     [PointerType size=64]->[Struct size=,fid: f93]
 */
-use @g_variant_unref[None](value': NullablePointer[GVariant] tag)
+use @g_variant_unref[None](value': NullablePointer[SGVariant] tag)
 

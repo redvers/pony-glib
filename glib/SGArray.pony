@@ -10,6 +10,6 @@
      000000: [PointerType size=64]->[FundamentalType(char) size=8]: data  
      000064: [FundamentalType(unsigned int) size=32]: len  
 */
-struct GArray
+struct SGArray
   var data': Pointer[U8] = Pointer[U8]
   var len': U32 = U32(0)

@@ -10,6 +10,6 @@
      000000: [PointerType size=64]->[FundamentalType(char) size=8]: name  
      000064: [Struct size=192,fid: f134]: value  
 */
-struct GParameter
+struct SGParameter
   var name': Pointer[U8] = Pointer[U8]
-  embed value': GValue = GValue
+  embed value': SGValue = SGValue

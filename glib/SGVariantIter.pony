@@ -9,7 +9,7 @@
   Fields (Offset in bits):
      000000: [ArrayType size=(0-15)]->[FundamentalType(long unsigned int) size=64]
 */
-struct GVariantIter
+struct SGVariantIter
   var x0': U64 = U64(0)
   var x1': U64 = U64(0)
   var x2': U64 = U64(0)

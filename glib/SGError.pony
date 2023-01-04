@@ -11,7 +11,7 @@
      000032: [FundamentalType(int) size=32]: code  
      000064: [PointerType size=64]->[FundamentalType(char) size=8]: message  
 */
-struct GError
+struct SGError
   var domain': U32 = U32(0)
   var code': I32 = I32(0)
   var message': Pointer[U8] = Pointer[U8]
